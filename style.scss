@@ -5,6 +5,13 @@ body {
     color: white;
     margin: 0;
     font-family: "Arial", sans-serif;
+
+    .cal {
+        background-color: #697F79;
+        height: auto;
+        margin: 3px;
+    }
+
     .header {
         background-color: darken($basecolor, 20%);
         color: white;
