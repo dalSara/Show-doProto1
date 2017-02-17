@@ -1,0 +1,22 @@
+body {
+  background-color: #eeeeee;
+  color: white;
+  margin: 0;
+  font-family: "Arial", sans-serif; }
+  body .header {
+    background-color: #bbbbbb;
+    color: white;
+    padding: 10px; }
+  body .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: black;
+    padding: 50px; }
+  body .eventDark {
+    max-width: 960px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px; }
