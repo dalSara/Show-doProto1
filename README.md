@@ -9,3 +9,5 @@ Finn ut av:
 => Farge over valgt + Css for att klikke "igjenom"
 
 => "Dutte ned" fra boks til list Url#
+
+=> hente in header footer med Angular
