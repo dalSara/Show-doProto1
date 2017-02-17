@@ -5,7 +5,7 @@ body {
   font-family: "Arial", sans-serif; }
   body .cal {
     background-color: #697F79;
-    height: auto;
+    height: 150px;
     margin: 3px; }
   body .header {
     background-color: #68a693;
