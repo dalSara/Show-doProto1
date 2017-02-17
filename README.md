@@ -20,3 +20,5 @@ Finn ut av:
 => hente in header footer med Angular
 
 => hålla bokser på plass i mobil.
+
+=> mindre header (for mobil hvertfall), gjøre sticky og legge navigasjon mellom sessions her
