@@ -1,5 +1,5 @@
-$basecolor: #eeeeee;
-$eventcolor: grey;
+$basecolor: #A8CCC1;
+$eventcolor: #697F79;
 body {
     background-color: $basecolor;
     color: white;
@@ -34,6 +34,7 @@ body {
         .eventLight {
             background-color: $eventcolor;
             padding: 30px;
+            color: white;
         }
     }
 

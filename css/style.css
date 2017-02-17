@@ -1,10 +1,10 @@
 body {
-  background-color: #eeeeee;
+  background-color: #A8CCC1;
   color: white;
   margin: 0;
   font-family: "Arial", sans-serif; }
   body .header {
-    background-color: #bbbbbb;
+    background-color: #68a693;
     color: white;
     padding: 10px; }
     body .header h1 {
@@ -20,9 +20,10 @@ body {
     color: black;
     padding: 50px; }
     body .container .eventDark {
-      background-color: #4d4d4d;
+      background-color: #3b4744;
       padding: 30px;
       color: white; }
     body .container .eventLight {
-      background-color: grey;
-      padding: 30px; }
+      background-color: #697F79;
+      padding: 30px;
+      color: white; }
