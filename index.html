@@ -24,24 +24,11 @@
 
 <body>
 
-
-    <div ng-include="'components/header.html'"></div><!--Header-->
+    <div ng-include="'components/header.html'"></div><!--header.html-->
 
     <div class="container">
 
-    <div class="row"> <!--Navigation text-->
-
-        <div class="col-sm-4">
-            <div class="pull-left">Previous</div>
-        </div>
-        <div class="col-sm-4">
-            <div class="text-center">This week</div>
-        </div>
-        <div class="col-sm-4">
-            <div class="pull-right">Next</div>
-        </div>
-
-    </div>
+        <div ng-include="'components/navigation.html'"></div><!--navigation.html-->
 
         <!--calender view-->
         <div class="table table-responsive">
