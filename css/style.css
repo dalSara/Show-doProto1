@@ -1,23 +1,14 @@
 /***************** constants ************************/
-/***************** Main content ************************/
+/***************** index - Main content ************************/
 body {
   background-color: #A8CCC1;
   color: white;
   margin: 0;
   font-family: "Arial", sans-serif;
   /**************** Header *************************/
-  /*****************************************/
-  /*****************************************/
-  /*****************************************/ }
-  body .calRow {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto; }
-  body .cal {
-    background-color: #c8dfd8;
-    height: 150px;
-    padding: 15px;
-    border: 1px solid #e2eeea; }
+  /******************* Navigation **********************/
+  /****************** Calender ***********************/
+  /********************* List ********************/ }
   body .container {
     max-width: 960px;
     margin-left: auto;
@@ -42,3 +33,8 @@ body {
       margin-left: auto;
       margin-right: auto;
       padding: 50px; }
+  body .cal {
+    background-color: #c8dfd8;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #e2eeea; }

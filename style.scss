@@ -6,26 +6,12 @@ $basecolor: #A8CCC1;
 $eventcolor: #697F79;
 
 
-/***************** Main content ************************/
-
+/***************** index - Main content ************************/
 body {
     background-color: $basecolor;
     color: white;
     margin: 0;
     font-family: "Arial", sans-serif;
-
-    .calRow {
-        max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cal {
-        background-color: lighten($basecolor, 10%);
-        height: 150px;
-        padding: 15px;
-        border: 1px solid lighten($basecolor, 18%);
-    }
 
     .container {
         max-width: 960px;
@@ -62,9 +48,20 @@ body {
             padding: 50px;
         }
     }
-/*****************************************/
-/*****************************************/
-/*****************************************/
+/******************* Navigation **********************/
+
+
+
+/****************** Calender ***********************/
+
+    .cal {
+        background-color: lighten($basecolor, 10%);
+        height: 150px;
+        padding: 15px;
+        border: 1px solid lighten($basecolor, 18%);
+    }
+/********************* List ********************/
+
 
 
 
