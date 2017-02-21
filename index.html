@@ -11,9 +11,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
+    <!-- jQuery library
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+     -->
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -24,7 +24,7 @@
 
 <body>
 
-    <div class="header">
+    <div class="header"><a id="Top"></a>
         <h1>Show & Do</h1>
     </div>
 
@@ -48,7 +48,7 @@
         <div class="table table-responsive">
             <table>
                 <tr>
-                  <td class="cal">Git</td>
+                  <td class="cal">Git<a href="#secondInfo">Click to scroll down</a></td>
                   <td class="cal">React</td>
                   <td class="cal">Gameplan</td>
                   <td class="cal">Gulp</td>
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <div class="eventLight">
+    <div id="#secondInfo" class="eventLight">
                 <div class="row">
             <div class="col-sm-5">
                 <img src="img/git.png" class="img-responsive" alt="Bilde av git-event">
@@ -113,7 +113,28 @@
 
     </div> <!--end main container-->
 
+    
+    <script>
+    
+        $('a[href^="#"]').on('click', function(event) {
+
+            var target = $(this.getAttribute('href'));
+
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+
+        });
+        
+        
+        
+    
+    </script>
     <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/jquery/src/jquery.js"></script>
 
 </body>
 
