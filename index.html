@@ -37,26 +37,7 @@
         <div ng-include="'components/list.html'"></div>
     </div><!--end container-->
 
-    
-    <script>
-    
-        $('a[href^="#"]').on('click', function(event) {
 
-            var target = $(this.getAttribute('href'));
-
-            if( target.length ) {
-                event.preventDefault();
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-            }
-
-        });
-        
-        
-        
-    
-    </script>
     <script src="/node_modules/angular/angular.js"></script>
 
 
