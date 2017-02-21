@@ -62,10 +62,22 @@ body {
     }
 /********************* List ********************/
 
-
-
-
-
+.scrollToTopBtn{
+	width: 100px;
+	height: 70px;
+	padding: 10px;
+    margin: 0 auto;
+	text-align: center;
+	background-color: skyblue;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position: fixed;
+	bottom: 0px;
+	right: 40px;
+	display: none;
+	/*background: url('arrow_up.png') no-repeat 0px 20px;*/ /*FINN IKON*/
+}
 
 
 

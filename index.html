@@ -13,6 +13,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff">
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Test</title>
@@ -37,11 +39,35 @@
         <div ng-include="'components/list.html'"></div>
     </div><!--end container-->
 
+    <!--<div id="scrollToTop" ng-include="'components/scrollToTop.html'"></div>-->
+
+    <a href="#" class="scrollToTopBtn">Scroll To Top</a><!--scrollToTop button-->
+
+    <script>
+        $(function(){
+
+            //SCROLL TO TOP
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollToTopBtn').fadeIn();
+                } else {
+                    $('.scrollToTopBtn').fadeOut();
+                }
+            });
+
+            //Click event to scroll to top
+            $('.scrollToTopBtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+
+        }());
+        //end SCROLL TO TOP
+    </script>
+
 
     <script src="/node_modules/angular/angular.min.js"></script>
-
-
-
 
 </body>
 
