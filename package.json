@@ -22,5 +22,8 @@
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.2"
   }
 }
