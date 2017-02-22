@@ -1,15 +1,9 @@
 <!-- this component fetch info to be displayed in list and calender -->
 
-<div class="row">
-    <div class="col-sm-4">
-        <div class="pull-left">Previous</div>
-    </div>
-
-    <div class="col-sm-4">
-        <div class="text-center">This week</div>
-    </div>
-
-    <div class="col-sm-4">
-        <div class="pull-right">Next</div>
-    </div>
-</div>
+<nav aria-label="..." role="navigation">
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+      <li class="disabled"><a href="#">This week</a></li>
+    <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
