@@ -39,18 +39,10 @@ body {
     padding: 15px;
     border: 1px solid #e2eeea; }
   body .scrollToTopBtn {
-    width: 100px;
-    height: 70px;
-    padding: 10px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: skyblue;
-    font-weight: bold;
-    color: #444;
-    text-decoration: none;
+    /*text-align: center;*/
+    /*position: relative;*/
     position: fixed;
-    bottom: 0px;
-    right: 40px;
+    bottom: 10px;
+    right: 10px;
     display: none;
-    /*background: url('arrow_up.png') no-repeat 0px 20px;*/
-    /*FINN IKON*/ }
+    color: black; }

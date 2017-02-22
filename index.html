@@ -17,6 +17,8 @@
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Test</title>
 
 </head>
@@ -37,11 +39,15 @@
 
         <!--LIST VIEW-->
         <div ng-include="'components/list.html'"></div>
+
+
     </div><!--end container-->
 
-    <!--<div id="scrollToTop" ng-include="'components/scrollToTop.html'"></div>-->
+    <!--scrollToTop button-->
+    <a href="#" class="scrollToTopBtn">
+        <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+    </a><!--end scrollToTop button-->
 
-    <a href="#" class="scrollToTopBtn">Scroll To Top</a><!--scrollToTop button-->
 
     <script>
         $(function(){
