@@ -32,6 +32,8 @@
         <!--NAVIGATION-->
         <div ng-include="'components/navigation.html'"></div>
 
+        <input class="firstInfo" type="button" value="More info.."/>
+
         <!--CALENDER VIEW-->
         <!--
         <div ng-include="'components/calender.html'"></div>
@@ -54,31 +56,9 @@
     </a><!--end scrollToTop button-->
 
 
-    <script>
-        $(function(){
-
-            //SCROLL TO TOP
-            //Check to see if the window is top if not then display button
-            $(window).scroll(function(){
-                if ($(this).scrollTop() > 100) {
-                    $('.scrollToTopBtn').fadeIn();
-                } else {
-                    $('.scrollToTopBtn').fadeOut();
-                }
-            });
-
-            //Click event to scroll to top
-            $('.scrollToTopBtn').click(function(){
-                $('html, body').animate({scrollTop : 0},800);
-                return false;
-            });
-
-        }());
-        //end SCROLL TO TOP
-    </script>
-
 
     <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/js/main.js"></script>
 
 </body>
 
