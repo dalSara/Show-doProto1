@@ -2,7 +2,15 @@
 
 <div class="table table-responsive">
 
-    <table>
+
+    <table ng-controller = "ShowDoController">
+
+        <tr ng-repeat = "eve in events">
+            <td>{{eve.title}}</td>
+
+        </tr>
+
+        <!--
         <tr>
 
           <td class="cal">Git</td>
@@ -26,6 +34,6 @@
           <td class="cal">Gameplan</td>
           <td class="cal">Gulp</td>
           <td class="cal">Kake bakeing</td>
-        </tr>
+        </tr> -->
     </table>
 </div>

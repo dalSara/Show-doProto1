@@ -36,13 +36,13 @@
         -->
 
         <!--CALENDER VIEW-->
-        <!--
+
         <div ng-include="'components/calender.html'"></div>
-        -->
 
-        <!--CALENDER VIEW FLEXBOX-->
+
+        <!--CALENDER VIEW FLEXBOX
         <div ng-include="'components/calender-flexbox.html'"></div>
-
+          -->
         <p class="lead"><a href="test">Legg til track</a></p>
 
         <!--LIST VIEW-->
@@ -65,9 +65,18 @@
     <script>
         var showDoApp = angular.module("showDoApp", []);
 
-        showDoApp.controller("ShowDoController", function(){
+        showDoApp.controller("ShowDoController", ['$scope', '$http', function($scope, $http){
+            $scope.events = [];
 
-        });//end showDoApp
+            $http.get('info.json')
+                .then(function (json){
+
+                //TODO choose date iterate
+                $scope.events = json[0].events
+
+            })
+
+        }]);//end showDoApp
     </script>
 
 
