@@ -10,12 +10,9 @@ body {
   /****************** Calender ***********************/
   /********************* List ********************/ }
   body .container {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: white;
     color: black;
-    padding: 50px; }
+    padding: 20px; }
     body .container .eventDark {
       background-color: #3b4744;
       padding: 30px;
@@ -28,11 +25,15 @@ body {
     background-color: #68a693;
     color: white;
     padding: 10px; }
-    body .header h1 {
-      max-width: 960px;
+    body .header h1, body .header h2, body .header h3 {
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      padding: 50px; }
+      padding: 20px; }
+  body .nav a {
+    color: #3b4744; }
+  body .nav a:hover {
+    color: #697F79; }
   body .cal {
     background-color: #c8dfd8;
     height: 150px;
