@@ -1,53 +1,107 @@
 <!-- this component shows the info in the calender with flexbox boostrap v4-alpha -->
-
-
-<div class="container">
-  <div class="row">
-    <div class="cal col">
-      1 of 5
-    </div>
-    <div class="cal col">
-      2 of 5
-    </div>
-    <div class="cal col">
-      3 of 5
-    </div>
-    <div class="cal col col-lg-1">
-      4 of 5
-    </div>
-    <div class="cal col col-lg-2">
-      5 of 5
-    </div>
-  </div>
-</div>
-
-
 <!--
-<div class="table table-responsive">
-    <table>
-        <tr>
-          <td class="cal">Git<a href="#secondInfo">Click to scroll down</a></td>
-          <td class="cal">React</td>
-          <td class="cal">Gameplan</td>
-          <td class="cal">Gulp</td>
-          <td class="cal">Kake bakeing</td>
-        </tr>
-
-        <tr>
-          <td class="cal">Git</td>
-          <td class="cal">React</td>
-          <td class="cal">Gameplan</td>
-          <td class="cal">konkuranse i kaffe drikking</td>
-          <td class="cal">Kake bakeing</td>
-        </tr>
-
-        <tr>
-          <td class="cal">Cakerating for show and do</td>
-          <td class="cal">React</td>
-          <td class="cal">Gameplan</td>
-          <td class="cal">Gulp</td>
-          <td class="cal">Kake bakeing</td>
-        </tr>
-    </table>
-</div>
+<div class="container"><div class="row"><div class="col col-lg-1">
+Time
+</div><div class="col">
+Track 1
+</div><div class="col">
+Track 2
+</div><div class="col">
+Track 3
+</div><div class="col">
+Track 4
+</div><div class="col">
+Track 5
+</div></div><div class="row"><div class="col col-lg-1"><div class="col">
+1300-<br>
+1345
+</div><div class="col">
+1400-<br>
+1445
+</div><div class="col">
+1500-<br>
+1545
+</div></div><div class="cal col align-self-start">
+1 of 5
+</div><div class="cal col align-self-stretch">
+2 of 5<br>
+Who's the baby howl uncontrollably for no reason please stop looking at your phone and pet me. Drink water out of the faucet. Who's the baby howl uncontrollably for no reason please stop looking at your phone and pet me. Drink water out of the faucet.
+</div><div class="cal col align-self-start">
+3 of 5
+</div><div class="cal col align-self-start">
+4 of 5
+</div><div class="cal col align-self-start">
+5 of 5
+</div></div></div>
 -->
+<table class="table">
+    <thead class="thead-default">
+        <tr>
+            <th>Time</th>
+            <th>Track 1</th>
+            <th>Track 2</th>
+            <th>Track 3</th>
+            <th>Track 4</th>
+            <th>Track 5</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1300-
+                <br>1345
+            </th>
+            <td class="cal" rowspan="3">
+                <h4>React/Redux</h4>
+                - a comprehensive introduction
+                (track 1)
+            </td>
+            <td class="cal" rowspan="3">
+                <h4>Team Tools: Gameplan</h4>
+                (track 2)
+            </td>
+            <td class="cal" rowspan="2">
+                <h4>Elasticsearch Class</h4>
+                Part 1 (track 3)
+            </td>
+            <td class="cal" rowspan="2">
+                <h4>Azure</h4>
+                A high-level view at the Microsoft's Cloud offering
+                (track 4)
+            </td>
+            <td class="cal" rowspan="1">
+                <h4>New Digital Product Review</h4>
+                Stay on top of digital product launches.
+                (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1400-
+                <br>1445
+            </th>
+            <td class="cal">
+                <h4>Co-creation</h4>
+                Help customer create their own frontpage. Case from FHI (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1500-
+                <br>1545
+            </th>
+            <td class="cal">
+                <h4>Elasticsearch Class </h4>
+                Part 1 (supervised training)<br>
+                (Track 3)
+            </td>
+            <td></td>
+            <td class="cal">
+                <h4>Classic project
+                setup to product thinking</h4>
+                Case from Nordic Choice Hotels
+
+                (track 5)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
