@@ -1,7 +1,11 @@
+@charset "UTF-8";
 /***************** constants ************************/
+/* _MILITÆRSYKEHUSGRØNN_
+$basecolor: #A8CCC1;
+$eventcolor: #697F79;*/
 /***************** index - Main content ************************/
 body {
-  background-color: #A8CCC1;
+  background-color: #1B98E0;
   color: white;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -14,15 +18,15 @@ body {
     color: black;
     padding: 20px; }
     body .container .eventDark {
-      background-color: #3b4744;
+      background-color: #a6a6a6;
       padding: 30px;
       color: white; }
     body .container .eventLight {
-      background-color: #697F79;
+      background-color: #D9D9D9;
       padding: 30px;
       color: white; }
   body .header {
-    background-color: #68a693;
+    background-color: #105a85;
     color: white; }
     body .header h1, body .header h2, body .header h3 {
       max-width: 1200px;
@@ -32,15 +36,15 @@ body {
     body .header .logo {
       padding: 1em; }
   body .nav a {
-    color: #3b4744; }
+    color: #a6a6a6; }
   body .nav a:hover {
-    color: #697F79; }
+    color: #D9D9D9; }
   body .cal {
-    background-color: #c8dfd8;
+    background-color: #45ade9;
     padding: 15px;
-    border: 1px solid #e2eeea; }
+    border: 1px solid #6abded; }
   body .cal-mob {
-    background-color: #c8dfd8;
+    background-color: #45ade9;
     padding: 0.8em;
     margin-left: 1em;
     margin-right: 1em;
