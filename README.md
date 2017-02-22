@@ -17,8 +17,6 @@ Finn ut av:
     http://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click
     
 
-=> hente in header footer med Angular
-
 => hålla bokser på plass i mobil.
 
 => mindre header (for mobil hvertfall), gjøre sticky og legge navigasjon mellom sessions her
