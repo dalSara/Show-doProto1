@@ -33,11 +33,11 @@
                 "room": "101",
                 "numberOfPartic": "10",
                 "prereq": "Install Elasticsearch + Kibana + Python (+ Java)",
-                "expect": "Learn how elasticsearch works and how you can use it for search and analysis. Including data visualization with Kibana and (data) samples from Vinmonpolet Agenda: Intro to search and search technology Using Elasticsearch REST API Feeding Vinmonopolet data into Elasticsearch Intro to Kibana - discover, visualize and graphs Find answers in Vinmopolet data using what you learned This is a test run of a course we will run at NTNU https://online.ntnu.no/events/373/elasticsearch-sok-og-dataanalyse-med-making-waves/",
+                "expect": "Learn how elasticsearch works and how you can use it for search and analysis. Including data visualization with Kibana and (data) samples from Vinmonpolet Agenda: Intro to search and search technology Using Elasticsearch REST API Feeding Vinmonopolet data into Elasticsearch Intro to Kibana - discover, visualize and graphs Find answers in Vinmopolet data using what you learned,
                 "host": "Christoffer Vig Frode Rennemo",
                 "whoJoin": "Anyone who wants to start using Elasticsearch",
                 "image": "",
-                "else": "" ,
+                "else": "This is a test run of a course we will run at NTNU https://online.ntnu.no/events/373/elasticsearch-sok-og-dataanalyse-med-making-waves/"" ,
                 "type": "Medium",
                 "startTime": "13.00"
             },
