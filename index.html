@@ -24,38 +24,34 @@
 </head>
 
 <body>
+    <section ng-controller="ShowDoController as showDoCtrl">
 
-    <!--HEADER-->
-    <div ng-include="'components/header.html'"></div>
+        <!--HEADER-->
+        <div ng-include="'components/header.html'"></div>
 
-    <div class="container">
-        <!--NAVIGATION-->
-        <div ng-include="'components/navigation.html'"></div>
-        <!--
-        <input class="firstInfo" type="button" value="More info.."/>
-        -->
+        <div class="container">
+            <!--NAVIGATION-->
+            <div ng-include="'components/navigation.html'"></div>
 
-        <!--CALENDER VIEW-->
+            <!--CALENDER VIEW-->
 
-        <div ng-include="'components/calender.html'"></div>
+            <div ng-include="'components/calender.html'"></div>
 
+            <!--CALENDER VIEW FLEXBOX
+            <div ng-include="'components/calender-flexbox.html'"></div>
+              -->
+            <p class="lead"><a href="test">Legg til track</a></p>
 
-        <!--CALENDER VIEW FLEXBOX
-        <div ng-include="'components/calender-flexbox.html'"></div>
-          -->
-        <p class="lead"><a href="test">Legg til track</a></p>
+            <!--LIST VIEW-->
+            <div ng-include="'components/list.html'"></div>
 
-        <!--LIST VIEW-->
-        <div ng-include="'components/list.html'"></div>
+        </div><!--end container-->
 
-
-    </div><!--end container-->
-
-    <!--scrollToTop button-->
-    <a href="#" class="scrollToTopBtn">
-        <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
-    </a><!--end scrollToTop button-->
-
+        <!--scrollToTop button-->
+        <a href="#" class="scrollToTopBtn">
+            <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+        </a><!--end scrollToTop button-->
+    </section>
 
 
     <script src="/node_modules/angular/angular.min.js"></script>
@@ -65,21 +61,25 @@
     <script>
         var showDoApp = angular.module("showDoApp", []);
 
-        showDoApp.controller("ShowDoController", ['$scope', '$http', function($scope, $http){
+        showDoApp.controller("ShowDoController", /*['$scope', '$http',*/ function($scope, $http, $location, $anchorScroll){
             $scope.events = [];
 
             $http.get('info.json')
                 .then(function (json){
 
                 //TODO choose date iterate
-                $scope.events = json[0].events
+                $scope.events = json[0].events;
 
-            })
+            });
 
-        }]);//end showDoApp
+             //scrollTo more info
+            $scope.scrollTo = function(id){
+                $location.hash(id);
+                $anchorScroll();
+            };
+            //end scrollTo more info
+
+        });//end ShowDoController
     </script>
-
-
 </body>
-
 </html>
