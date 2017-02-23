@@ -77,7 +77,7 @@ body {
   body .track-arrow {
     line-height: 5px; }
   body .track-details {
-    max-height: 250px;
+    max-height: 400px;
     transition: .8s;
     overflow: hidden; }
   body .track-details.hidden {

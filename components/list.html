@@ -1,54 +1,31 @@
 <!-- this component is showing the info in the list -->
-
 <section ng-controller="ShowDoController as ShowDoCtrl">
-
     <ul class="list-unstyled">
         <li ng-repeat="track in tracks" class="tracks">
             <div class="d-flex flex-row justify-content-between">
-              <div class="p-2"><h4>{{track.title}}</h4></div>
-              <div class="p-2" ng-click="showDetails = ! showDetails"><i class="fa fa-angle-down fa-2x track-arrow" aria-hidden="true"></i></div>
+                <div class="p-2">
+                    <h4>{{track.title}}</h4>
+                </div>
+                <div class="p-2"
+                    ng-click="showDetails = ! showDetails">
+                    <i ng-model="collapsed"
+                        ng-click="collapsed=!collapsed"
+                        ng-class="{'fa fa-angle-up fa-2x':collapsed,'fa fa-angle-down fa-2x':!collapsed}" class="track-arrow" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="track-details" ng-class="{ 'hidden': ! showDetails }">
              {{track.expect}}
             </div>
         </li>
     </ul>
-
 </section>
+<script type="text/javascript">
+
+    //ng-class="{'icon-closed':collapsed,'icon-opened':!collapsed}"
+    //ng-click="showDetails = ! showDetails"
+
+
+</script>
 <!--
-<div class="eventDark">
-    <div class="row">
-        <div class="col-sm-5">
-            <img src="img/event1.jpg" class="img-fluid" alt="Bilde av event">
-        </div>
-        <div class="col-sm-7">
-            <h2>Gameplan</h2>
-            <p class="lead">kl. 13 i Room OSL - 301</p>
-        </div>
-    </div>
-</div>
-
-<div id="git" class="eventLight">
-            <div class="row">
-        <div class="col-sm-5">
-            <img src="img/git.png" class="img-fluid" alt="Bilde av git-event">
-        </div>
-        <div class="col-sm-7">
-            <h2>Git</h2>
-            <p class="lead">kl. 13 i Room OSL - 301</p>
-        </div>
-    </div>
-</div>
-
-<div class="eventDark">
-    <div class="row">
-        <div class="col-sm-5">
-            <img src="img/event1.jpg" class="img-fluid" alt="Bilde av event">
-        </div>
-        <div class="col-sm-7">
-            <h2>Gameplan</h2>
-            <p class="lead">kl. 13 i Room OSL - 301</p>
-        </div>
-    </div>
-</div>
+<div class="eventDark"><div class="row"><div class="col-sm-5"><img src="img/event1.jpg" class="img-fluid" alt="Bilde av event"></div><div class="col-sm-7"><h2>Gameplan</h2><p class="lead">kl. 13 i Room OSL - 301</p></div></div></div><div id="git" class="eventLight"><div class="row"><div class="col-sm-5"><img src="img/git.png" class="img-fluid" alt="Bilde av git-event"></div><div class="col-sm-7"><h2>Git</h2><p class="lead">kl. 13 i Room OSL - 301</p></div></div></div><div class="eventDark"><div class="row"><div class="col-sm-5"><img src="img/event1.jpg" class="img-fluid" alt="Bilde av event"></div><div class="col-sm-7"><h2>Gameplan</h2><p class="lead">kl. 13 i Room OSL - 301</p></div></div></div>
 -->
