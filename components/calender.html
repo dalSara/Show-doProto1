@@ -1,10 +1,10 @@
 <!-- this component shows the info in the calender -->
 
-<div class="table table-responsive">
+<div class="table table-responsive" ng-controller = "ShowDoController">
 
     <a ng-click="scrollTo('git')">More info: Git TEST</a><!--scrollTo more info TEST-->
 
-    <table ng-controller = "ShowDoController">
+    <table>
 
         <tr ng-repeat = "eve in events">
             <td>{{eve.title}}</td>
