@@ -1,7 +1,8 @@
 <!-- this component shows the info in the calender with flexbox boostrap v4-alpha -->
 
-<!--
-<table class="table table-responsive">
+<!-- TABLE VISIBLE ONLY ON LARGE SCREENS -->
+<div class="hidden-sm-down">
+<table class="table">
     <!--
     <thead class="thead-default">
         <tr>
@@ -13,6 +14,7 @@
             <th>Track 5</th>
         </tr>
     </thead>
+-->
     <tbody>
         <tr>
             <th scope="row">1300-
@@ -64,12 +66,14 @@
         </tr>
     </tbody>
 </table>
--->
+</div>
 
+<!-- DIV VISIBLE ONLY ON SMALL SCREENS -->
+<div class="hidden-md-up">
 <div class="container">
   <div class="row">
     <div class="col-3">
-      <h3>1300-<br>1345</h3>
+      <div class="track-time-mob">1300-<br>1345</div>
     </div>
     <div class="col">
       <div class="row">
@@ -104,7 +108,7 @@
 <div class="container">
 <div class="row">
     <div class="col-3">
-      <h3>1400-<br>1445</h3>
+      <div class="track-time-mob">1400-<br>1445</div>
     </div>
     <div class="col">
       <div class="row">
@@ -119,7 +123,7 @@
 <div class="container">
 <div class="row">
     <div class="col-3">
-      <h3>1500-<br>1545</h3>
+      <div class="track-time-mob">1500-<br>1545</div>
     </div>
     <div class="col">
       <div class="row">
@@ -133,5 +137,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>

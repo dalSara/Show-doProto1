@@ -64,8 +64,12 @@ body {
 /******************* Navigation **********************/
 
     .nav {
+
+        padding: 0;
+        margin: 0;
+
         a {
-          color: darken($eventcolor, 20%);
+          color: darken($basecolor, 20%);
         }
 
         a:hover {
@@ -79,7 +83,8 @@ body {
     .cal {
         background-color: lighten($basecolor, 10%);
         padding: 15px;
-        border: 1px solid lighten($basecolor, 18%);
+        border: 2px solid lighten($basecolor, 100%);
+        @include border-radius(10px);
     }
 
     .cal-mob {
@@ -90,8 +95,38 @@ body {
         margin-bottom: 0.2em;
         @include border-radius(4px);
     }
+
+    .track-time-mob {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
 /********************* List ********************/
 
+    .tracks {
+        background-color: lighten($basecolor, 20%);
+        color: white;
+        padding: 1.5em;
+        margin-bottom: 1em;
+        @include border-radius(4px);
+
+        a {
+            color: white;
+        }
+    }
+
+    .track-arrow {
+        line-height: 5px;
+    }
+    .track-details {
+    max-height: 250px;
+    transition: .8s;
+    overflow: hidden;
+    }
+
+    .track-details.hidden {
+    max-height: 0;
+    }
 
 .scrollToTopBtn{
     /*text-align: center;*/

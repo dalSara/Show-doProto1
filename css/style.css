@@ -35,14 +35,21 @@ body {
       padding: 20px; }
     body .header .logo {
       padding: 1em; }
-  body .nav a {
-    color: #a6a6a6; }
-  body .nav a:hover {
-    color: #D9D9D9; }
+  body .nav {
+    padding: 0;
+    margin: 0; }
+    body .nav a {
+      color: #105a85; }
+    body .nav a:hover {
+      color: #D9D9D9; }
   body .cal {
     background-color: #45ade9;
     padding: 15px;
-    border: 1px solid #6abded; }
+    border: 2px solid white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px; }
   body .cal-mob {
     background-color: #45ade9;
     padding: 0.8em;
@@ -53,6 +60,28 @@ body {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px; }
+  body .track-time-mob {
+    font-size: 1.2em;
+    font-weight: 600; }
+  body .tracks {
+    background-color: #73c1ee;
+    color: white;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+    body .tracks a {
+      color: white; }
+  body .track-arrow {
+    line-height: 5px; }
+  body .track-details {
+    max-height: 250px;
+    transition: .8s;
+    overflow: hidden; }
+  body .track-details.hidden {
+    max-height: 0; }
   body .scrollToTopBtn {
     /*text-align: center;*/
     /*position: relative;*/
