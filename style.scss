@@ -104,16 +104,26 @@ body {
 /********************* List ********************/
 
     .tracks {
-        background-color: lighten($basecolor, 20%);
-        color: white;
+        color: darken($basecolor, 90%);
         padding: 1.5em;
         margin-bottom: 1em;
         @include border-radius(4px);
+
+        h4 {
+            color: black;
+            background-color: white;
+            padding: 5px;
+        }
 
         a {
             color: white;
         }
     }
+
+    .bg-fade {
+        background-color:rgba(255,0,0,0.5);
+    }
+
 
     .track-arrow {
         line-height: 5px;

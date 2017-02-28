@@ -64,6 +64,7 @@
 
 
     <script>
+        (function(){
         var showDoApp = angular.module("showDoApp", []);
 
         showDoApp.controller("ShowDoController", ['$scope', '$http', function($scope, $http){
@@ -73,16 +74,43 @@
                 expect: "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
                 room: "Kantina",
                 numberOfPartic: "23",
-                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way."
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event1.png"
               },
               {
-                title: 'Item 2',
-                expect: 'Something!'
-              }
+                title: 'Team Tools: Gameplan',
+                expect: 'Something!',
+                room: "Kantina",
+                numberOfPartic: "23",
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event2.jpg"
+              },
+                                {
+                title: 'Elastic Search Class',
+                expect: "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
+                room: "Kantina",
+                numberOfPartic: "23",
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event1.png"
+              },
             ];
 
 
-        }]);//end showDoApp
+
+
+             //scrollTo more info
+            $scope.scrollTo = function(id){
+                $location.hash(id);
+                $anchorScroll();
+            };
+            //end scrollTo more info
+
+            }]);//end showDoApp
+
+        })();//end ShowDoController
+
+
+
     </script>
 
 
