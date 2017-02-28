@@ -64,16 +64,21 @@ body {
     font-size: 1.2em;
     font-weight: 600; }
   body .tracks {
-    background-color: #73c1ee;
-    color: white;
+    color: black;
     padding: 1.5em;
     margin-bottom: 1em;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px; }
+    body .tracks h4 {
+      color: black;
+      background-color: white;
+      padding: 5px; }
     body .tracks a {
       color: white; }
+  body .bg-fade {
+    background-color: rgba(255, 0, 0, 0.5); }
   body .track-arrow {
     line-height: 5px; }
   body .track-details {
