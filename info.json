@@ -1,27 +1,347 @@
- {"events" : [
+[
+    {
+        "date": "10.02.17",
+        {"events" : [
             {
-                "title":"React/Redux - a comprehensive introduction",
-                "room":"kantina",
-                "numberOfPartic":"23",
-                "prereq":"Curiosity and interrest in learning how to program React in a structural and separation-of concerning way.",
+                "title": "React/Redux - a comprehensive introduction",
+                "room": "kantina",
+                "numberOfPartic": "23",
+                "prereq": "Curiosity and interrest in learning how to program React in a structural and separation-of concerning way.",
                 "expect": "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
-                "host":"Bertin Hansen",
-                "whoJoin":"Developers looking to learn React/Redux",
-                "image":" ",
-                "else":" " ,
-                "type":"large",
-                "startTime":"13.00"
+                "host": "Bertin Hansen",
+                "whoJoin": "Developers looking to learn React/Redux",
+                "image": "",
+                "else": "" ,
+                "type": "large",
+                "startTime": "13.00"
             },
             {
-                "title":"Team Tools: Gameplan",
-                "room":"Stallen",
-                "numberOfPartic":"-",
-                "prereq":"An interest in how we can improve the way we work and/or attack new challenges together in teams",
-                "expect":"Learn more about the Gameplan - a great tool for starting up a project/onboarding a new team or when you want to make sure that you start up in a good way w/ your client.There will be plenty of testing and trying, as well as some theory and background info on the tool itself.",
-                "host":"Tone Fredrikke Mong Haug",
-                "whoJoin":"Anyone interested in process improvement and team dynamics",
-                "image":"",
-                "else":"" ,
-                "type":"Large",
-                "startTime":"13.00"
-            }]}
+                "title": "Team Tools: Gameplan",
+                "room": "Stallen",
+                "numberOfPartic": "-",
+                "prereq": "An interest in how we can improve the way we work and/or attack new challenges together in teams",
+                "expect": "Learn more about the Gameplan - a great tool for starting up a project/onboarding a new team or when you want to make sure that you start up in a good way w/ your client.There will be plenty of testing and trying, as well as some theory and background info on the tool itself.",
+                "host": "Tone Fredrikke Mong Haug",
+                "whoJoin": "Anyone interested in process improvement and team dynamics",
+                "image": "",
+                "else": "" ,
+                "type": "Large",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Elasticsearch Class Part 1",
+                "room": "101",
+                "numberOfPartic": "10",
+                "prereq": "Install Elasticsearch + Kibana + Python (+ Java)",
+                "expect": "Learn how elasticsearch works and how you can use it for search and analysis. Including data visualization with Kibana and (data) samples from Vinmonpolet Agenda: Intro to search and search technology Using Elasticsearch REST API Feeding Vinmonopolet data into Elasticsearch Intro to Kibana - discover, visualize and graphs Find answers in Vinmopolet data using what you learned",
+                "host": "Christoffer Vig Frode Rennemo",
+                "whoJoin": "Anyone who wants to start using Elasticsearch",
+                "image": "",
+                "else": "This is a test run of a course we will run at NTNU https://online.ntnu.no/events/373/elasticsearch-sok-og-dataanalyse-med-making-waves/",
+                "type": "Medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Azure:A high-level view at the Microsoft's Cloud offering",
+                "room": "104",
+                "numberOfPartic": "-",
+                "prereq": "Nothing in particular",
+                "expect": "To learn about current and future Azure cloud capabilities, security and data privacy concerns, and much more. Presentation will be held in English.",
+                "host": "Joachim Draget in collaboration with Atea",
+                "whoJoin": "Anyone involved in sales, delivery management, client development, technology, content or design who wants a high-level view on cloud computing in general and Azure in particular.",
+                "image": "",
+                "else": "" ,
+                "type": "medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Elasticsearch Class part 1(supervised training)",
+                "room": "101",
+                "numberOfPartic": "",
+                "prereq": "",
+                "expect": "",
+                "host": "Christoffer Vig Frode Rennemo",
+                "whoJoin": "",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "15.00"
+
+            },
+            {
+                "title": "New Digital Product Review: Stay on top of digital product launches",
+                "room": "303",
+                "numberOfPartic": "-",
+                "prereq": "	Curiosity",
+                "expect": "Inspiration, discussions",
+                "host": "Madeleine Rose Thompson",
+                "whoJoin": "Anyone interested in trends",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Co-creation: Help customer create their own frontpage. Case from FHI",
+                "room": "303",
+                "numberOfPartic": "15",
+                "prereq": "Some workshop facilitation might help fuel interest, but otherwise no special skills required.",
+                "expect": "In this workshop, you will learn a very effective method for planning and facilitating the most difficult workshop in any website project, namely the front page! Asbjørn will go through how to plan and conduct the front page workshop, with reference to the new website FHI.no that came second in Farmand prisen 2016.",
+                "host": "Asbjørn Floden",
+                "whoJoin": "Workshop-facilitators (typically designers or project managers) who are about to define the front page for a web site.",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "14.00"
+            },
+            {
+                "title": "The journey from classic project setup to product thinking in Nordic Choice Hotels",
+                "room": "303",
+                "numberOfPartic": "-",
+                "prereq": "Nothing in particular.",
+                "expect": "A walk-through of the journey and experiences we have had in the choice-project towards a more product thinking/management approach, from a more classic project setup.",
+                "host": "Thomas Vikanes",
+                "whoJoin": "Project managers and anyone interested in product management",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "15.00"
+            }
+        ]
+    },
+
+    {
+        "date" : "10.03.17",
+        "events" : [
+            {
+                "title": "Introduksjon til Git Arne og Carl-Erik",
+                "room": "303",
+                "numberOfPartic": "10",
+                "prereq": "Nothing in particular.",
+                "expect": "An introduction to Git",
+                "host": "Arne og Carl-Erik",
+                "whoJoin": "Anyone who wants to learn more about Git",
+                "image": "",
+                "else": "Stare at the wall, play with food and get confused by dust. ",
+                "type": "large",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Toolset 2017: Deepcrawl - intro to premium SEO/Insights tool.",
+                "room": "stallen",
+                "numberOfPartic": "-",
+                "prereq": "Destroy couch as revenge human is washing you why halp oh the horror flee scratch hiss bite.",
+                "expect": "Missing until dinner time. You call this cat food? attack dog, run away and pretend to be victim, and scamper yet pooping rainbow while flying in a toasted bread costume in space.",
+                "host": "Morten André Mikalsen",
+                "whoJoin": "",
+                "image": "",
+                "else": "" ,
+                "type": "medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "OFFSET - Conference report.",
+                "room": "601",
+                "numberOfPartic": "-",
+                "prereq": "Spend all night ensuring people don't sleep",
+                "expect": "Sleep in the bathroom sink eat owner's food attack dog",
+                "host": "Jørn, Stian, Graham + Lee",
+                "whoJoin": "Eat all the power cords a nice warm laptop for me to sit on yet hopped up on catnip",
+                "image": "",
+                "else": "Kitten is playing with dead mouse" ,
+                "type": "medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "WISHLIST: DESIGNING 404",
+                "room": "101",
+                "numberOfPartic": "-",
+                "prereq": "Hide from vacuum cleaner.",
+                "expect": "Kitty scratches couch bad kitty run outside as soon as door open yet tuxedo cats always looking dapper but lick the curtain just to be annoying.",
+                "host": "Svein Erik",
+                "whoJoin": "Ignore the squirrels, you'll never catch them anyway",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Cybernetic architectures (building feedback into the system design)Small",
+                "room": "201",
+                "numberOfPartic": "-",
+                "prereq": "Flee in terror at cucumber discovered on floor. ",
+                "expect": "jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed and eat from dog's food. ",
+                "host": "Pål Rønning",
+                "whoJoin": "Meow Gate keepers of hell dream about hunting birds yet destroy couch as revenge or gnaw the corn cob so lick the curtain just to be annoying. ",
+                "image": "",
+                "else": "Give attitude spill litter box, scratch at owner, destroy all furniture, especially couch where is my slave? I'm getting hungry my slave human didn't give me any food so i pooped on the floor, yet chew iPad power cord. " ,
+                "type": "small",
+                "startTime": "14.00"
+            },
+            {
+                "title": "Interaction design + SEO; case presentation (Meny)",
+                "room": "536",
+                "numberOfPartic": "-",
+                "prereq": "Have secret plans friends are not food and flee in terror at cucumber discovered on floor or sit on human",
+                "expect": "wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again",
+                "host": "Heidi",
+                "whoJoin": "Sleep on keyboard licks paws yet rub face on owner for lick yarn hanging out of own butt or poop in litter box, scratch the walls but lick the other cats brown cats with pink ears.",
+                "image": "",
+                "else": " i tell my human nap all day, for hack up furballs. " ,
+                "type": "small",
+                "startTime": "14.00"
+            },
+            {
+                "title": "Teknisk introduksjon til Azure",
+                "room": "701",
+                "numberOfPartic": "10",
+                "prereq": "hairball run catnip eat the grass sniff",
+                "expect": "Chase red laser dot cats making all the muffins, but soft kitty warm kitty little ball of furr leave hair everywhere.",
+                "host": "Joachim D, Tormod U, Erik N",
+                "whoJoin": "Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "15.00"
+            },
+            {
+                "title": "Google Design Sprint. Case from Ruter. Large.",
+                "room": "333",
+                "numberOfPartic": "7",
+                "prereq": "With tail in the air licks paws inspect anything brought into the house, for eat from dog's food",
+                "expect": "Cat snacks. Pee in the shoe poop in the plant pot so chase dog then run away. Love to play with owner's hair tie",
+                "host": "Joachim von der Lippe.",
+                "whoJoin": " leave dead animals as gifts",
+                "image": "",
+                "else": "Playing with balls of wool kitty scratches couch bad kitty sweet beast. Russian blue." ,
+                "type": "small",
+                "startTime": "15.00"
+            }
+        ]
+    },
+    {
+        "date": "24.03.17",
+        "events" : [
+            {
+                "title": "Prototype with code, how to communicate ideas with code.",
+                "room": "105",
+                "numberOfPartic": "-",
+                "prereq": " the grass sniff you call this cat food",
+                "expect": "With tail in the air licks paws inspect anything brought into the house, for eat from dog's food. Playing with balls of wool kitty scratches couch bad kitty sweet beast. Russian blue.",
+                "host": "Eivind Ingebrigtesn",
+                "whoJoin": "Cat snacks. Pee in the shoe poop in the plant pot",
+                "image": "",
+                "else": "toilet paper lick the other cats for Gate keepers of hell" ,
+                "type": "large",
+                "startTime": "13.00"
+            },
+            {
+                "title": "CONTENTFUL: product/technology workshop",
+                "room": "14",
+                "numberOfPartic": "5",
+                "prereq": "step on your keyboard while you're gaming and then turn in a circle , for run in circles",
+                "expect": "Jump around on couch, meow constantly until given food, mewl for food at 4am, or pee in human's bed until he cleans the litter box so shake treat bag playing with balls of wool. Thug cat poop on grasses.",
+                "host": "EXTERNAL",
+                "whoJoin": "Favor packaging over toy. ",
+                "image": "",
+                "else": "Meow all night having their mate disturbing sleeping humans i am the best under the bed leave fur on owners clothes for licks paws sit on the laptop. " ,
+                "type": "medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Toolset 2017: Supermetrics & Geckoboard for live analytics dashboards (Ruter case).",
+                "room": "781",
+                "numberOfPartic": "-",
+                "prereq": "Meow meow, i tell my human",
+                "expect": "Hate dog howl on top of tall thing or stand in front of the computer screen, for purr while eating and hide when guests come over. Lie in the sink all day purr. Kitty power!",
+                "host": "Nils Willie Kaisen & Torstein Risnes",
+                "whoJoin": "disturbing sleeping humans",
+                "image": "",
+                "else": "" ,
+                "type": "medium",
+                "startTime": "13.00"
+            },
+            {
+                "title": "CONTENTFUL: product intro for non-techies ",
+                "room": "131",
+                "numberOfPartic": "15",
+                "prereq": "Stare out the window fall over dead (not really but gets sypathy) has closed eyes but still sees you.",
+                "expect": "Lick butt and make a weird face step on your keyboard while you're gaming and then turn in a circle or why must they do that,",
+                "host": "Bengt",
+                "whoJoin": "Make meme, make cute face lie in the sink all day. Scratch the box.",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Introduction to Azure Data Lake",
+                "room": "88",
+                "numberOfPartic": "-",
+                "prereq": "My slave human didn't give me any food so i pooped on the floor",
+                "expect": "Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff you call this cat food?",
+                "host": "Anders Haukvik",
+                "whoJoin": "meoooow! and present belly, scratch hand when stroked kitten",
+                "image": "",
+                "else": "Playing with balls of wool kitty scratches couch bad kitty sweet beast." ,
+                "type": "small",
+                "startTime": "13.00"
+            },
+            {
+                "title": "Design for Display",
+                "room": "101",
+                "numberOfPartic": "5",
+                "prereq": "Spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce caticus cuteicus",
+                "expect": "Plan steps for world domination stare at ceiling light and unwrap toilet paper",
+                "host": "Julie Erika Lorch-Falch Chrissafopoulos",
+                "whoJoin": "Licks paws eat a plant, ",
+                "image": "",
+                "else": " Chew on cable jump around on couch, meow constantly until given food, purrr purr littel cat, little cat purr purr and hopped up on catnip.",
+                "type": "small",
+                "startTime": "14.00"
+            },
+            {
+                "title": "Highlights from elastic{on} 2017",
+                "room": "145",
+                "numberOfPartic": "25",
+                "prereq": "Chase after silly colored fish toys around the house hola te quiero leave dead animals as gifts,",
+                "expect": "Pee in the shoe poop in the plant pot so chase dog then run away. Love to play with owner's hair tie chase after silly colored fish toys around the house lie in the sink all day so kitty poochy.",
+                "host": "Tallak Small",
+                "whoJoin": "Licks paws eat a plant, kill a hand and sit in box, lick butt, yet hide when guests come over.",
+                "image": "",
+                "else": "Eat grass, throw it back up" ,
+                "type": "small",
+                "startTime": "14.00"
+            },
+            {
+                "title": "How can we work with a Pro bono project in MW by using Show & Do? (Service Design)",
+                "room": "131",
+                "numberOfPartic": "15",
+                "prereq": "Eat grass, throw it back up leave dead animals as gifts, and lie on your belly and purr when you are asleep mrow sweet beast use lap as chair paw at beetle and eat it before it gets away.",
+                "expect": "Lies down man running from cops stops to pet cats, goes to jail paw at beetle and eat it before it gets away",
+                "host": "Bengt",
+                "whoJoin": "Pelt around the house and up and down stairs chasing phantoms eat the fat cats food caticus cuteicus.",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "15.00"
+            },
+             {
+                "title": "Show the new MW brand when finished",
+                "room": "131",
+                "numberOfPartic": "15",
+                "prereq": "Eat grass, throw it back up leave dead animals as gifts, and lie on your belly and purr when you are asleep mrow sweet beast use lap as chair paw at beetle and eat it before it gets away.",
+                "expect": "Lies down man running from cops stops to pet cats, goes to jail paw at beetle and eat it before it gets away",
+                "host": "Graham, Ingrid + Cathrine H",
+                "whoJoin": "Pelt around the house and up and down stairs chasing phantoms eat the fat cats food caticus cuteicus.",
+                "image": "",
+                "else": "" ,
+                "type": "small",
+                "startTime": "15.00"
+            }
+
+        ]
+
+    }
+]
+
