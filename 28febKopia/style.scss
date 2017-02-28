@@ -1,0 +1,154 @@
+
+
+/***************** constants ************************/
+
+/* _MILITÆRSYKEHUSGRØNN_
+$basecolor: #A8CCC1;
+$eventcolor: #697F79;*/
+
+$basecolor: #1B98E0;
+$eventcolor: #D9D9D9;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+/***************** index - Main content ************************/
+body {
+    background-color: $basecolor;
+    color: white;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+
+    .container {
+        background-color: white;
+        color: black;
+        padding: 20px;
+
+        .eventDark {
+            background-color: darken($eventcolor, 20%);
+            padding: 30px;
+            color: white;
+        }
+
+        .eventLight {
+            background-color: $eventcolor;
+            padding: 30px;
+            color: white;
+        }
+    }
+
+
+/**************** Header *************************/
+    .header {
+        background-color: darken($basecolor, 20%);
+        color: white;
+
+        h1, h2, h3 {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        .logo {
+            padding: 1em;
+        }
+
+    }
+/******************* Navigation **********************/
+
+    .nav {
+
+        padding: 0;
+        margin: 0;
+
+        a {
+          color: darken($basecolor, 20%);
+        }
+
+        a:hover {
+            color: $eventcolor;
+        }
+
+    }
+
+/****************** Calender ***********************/
+
+    .cal {
+        background-color: lighten($basecolor, 10%);
+        padding: 15px;
+        border: 2px solid lighten($basecolor, 100%);
+        @include border-radius(10px);
+    }
+
+    .cal-mob {
+        background-color: lighten($basecolor, 10%);
+        padding: 0.8em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 0.2em;
+        @include border-radius(4px);
+    }
+
+    .track-time-mob {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+/********************* List ********************/
+
+    .tracks {
+        color: darken($basecolor, 90%);
+        padding: 1.5em;
+        margin-bottom: 1em;
+        @include border-radius(4px);
+
+        h4 {
+            color: black;
+            background-color: white;
+            padding: 5px;
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+    .bg-fade {
+        background-color:rgba(255,0,0,0.5);
+    }
+
+
+    .track-arrow {
+        line-height: 5px;
+    }
+    .track-details {
+    max-height: 400px;
+    transition: .8s;
+    overflow: hidden;
+    }
+
+    .track-details.hidden {
+    max-height: 0;
+    }
+
+.scrollToTopBtn{
+    /*text-align: center;*/
+    /*position: relative;*/
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+}//End body

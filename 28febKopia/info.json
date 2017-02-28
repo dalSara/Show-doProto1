@@ -1,0 +1,27 @@
+ {"events" : [
+            {
+                "title":"React/Redux - a comprehensive introduction",
+                "room":"kantina",
+                "numberOfPartic":"23",
+                "prereq":"Curiosity and interrest in learning how to program React in a structural and separation-of concerning way.",
+                "expect": "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
+                "host":"Bertin Hansen",
+                "whoJoin":"Developers looking to learn React/Redux",
+                "image":" ",
+                "else":" " ,
+                "type":"large",
+                "startTime":"13.00"
+            },
+            {
+                "title":"Team Tools: Gameplan",
+                "room":"Stallen",
+                "numberOfPartic":"-",
+                "prereq":"An interest in how we can improve the way we work and/or attack new challenges together in teams",
+                "expect":"Learn more about the Gameplan - a great tool for starting up a project/onboarding a new team or when you want to make sure that you start up in a good way w/ your client.There will be plenty of testing and trying, as well as some theory and background info on the tool itself.",
+                "host":"Tone Fredrikke Mong Haug",
+                "whoJoin":"Anyone interested in process improvement and team dynamics",
+                "image":"",
+                "else":"" ,
+                "type":"Large",
+                "startTime":"13.00"
+            }]}

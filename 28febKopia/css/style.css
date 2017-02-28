@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/***************** constants ************************/
+/* _MILITÆRSYKEHUSGRØNN_
+$basecolor: #A8CCC1;
+$eventcolor: #697F79;*/
+/***************** index - Main content ************************/
+body {
+  background-color: #1B98E0;
+  color: white;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  /**************** Header *************************/
+  /******************* Navigation **********************/
+  /****************** Calender ***********************/
+  /********************* List ********************/ }
+  body .container {
+    background-color: white;
+    color: black;
+    padding: 20px; }
+    body .container .eventDark {
+      background-color: #a6a6a6;
+      padding: 30px;
+      color: white; }
+    body .container .eventLight {
+      background-color: #D9D9D9;
+      padding: 30px;
+      color: white; }
+  body .header {
+    background-color: #105a85;
+    color: white; }
+    body .header h1, body .header h2, body .header h3 {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px; }
+    body .header .logo {
+      padding: 1em; }
+  body .nav {
+    padding: 0;
+    margin: 0; }
+    body .nav a {
+      color: #105a85; }
+    body .nav a:hover {
+      color: #D9D9D9; }
+  body .cal {
+    background-color: #45ade9;
+    padding: 15px;
+    border: 2px solid white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px; }
+  body .cal-mob {
+    background-color: #45ade9;
+    padding: 0.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.2em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  body .track-time-mob {
+    font-size: 1.2em;
+    font-weight: 600; }
+  body .tracks {
+    color: black;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+    body .tracks h4 {
+      color: black;
+      background-color: white;
+      padding: 5px; }
+    body .tracks a {
+      color: white; }
+  body .bg-fade {
+    background-color: rgba(255, 0, 0, 0.5); }
+  body .track-arrow {
+    line-height: 5px; }
+  body .track-details {
+    max-height: 400px;
+    transition: .8s;
+    overflow: hidden; }
+  body .track-details.hidden {
+    max-height: 0; }
+  body .scrollToTopBtn {
+    /*text-align: center;*/
+    /*position: relative;*/
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    color: black; }

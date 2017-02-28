@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="showDoApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Test</title>
+
+</head>
+
+<body>
+    <section ng-controller="ShowDoController as showDoCtrl">
+
+        <!--HEADER-->
+        <div ng-include="'components/header.html'"></div>
+
+        <div class="container">
+            <!--NAVIGATION-->
+            <div ng-include="'components/navigation.html'"></div>
+
+            <!--CALENDER VIEW-->
+
+            <div ng-include="'components/calender.html'"></div>
+
+            <!--CALENDER VIEW FLEXBOX
+            <div ng-include="'components/calender-flexbox.html'"></div>
+              -->
+            <p class="lead"><a href="test">Legg til track</a></p>
+
+            <!--LIST VIEW-->
+            <div ng-include="'components/list.html'"></div>
+
+        </div><!--end container-->
+
+        <!--scrollToTop button-->
+        <a href="#" class="scrollToTopBtn">
+            <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+        </a><!--end scrollToTop button-->
+    </section>
+
+
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/js/main.js"></script>
+
+
+    <script>
+        var showDoApp = angular.module("showDoApp", []);
+
+        showDoApp.controller("ShowDoController", /*['$scope', '$http',*/ function($scope, $http, $location, $anchorScroll){
+            $scope.events = [];
+
+            $http.get('info.json')
+                .then(function (json){
+
+                //TODO choose date iterate
+                $scope.events = json[0].events;
+
+            });
+
+             //scrollTo more info
+            $scope.scrollTo = function(id){
+                $location.hash(id);
+                $anchorScroll();
+            };
+            //end scrollTo more info
+
+        });//end ShowDoController
+    </script>
+</body>
+</html>
