@@ -5,6 +5,7 @@ $(function(){
             var $thisWeekBtn;
             var $nextBtn;
             var $infoTest;
+            var $JStrack1;
 
 
 
@@ -16,6 +17,7 @@ $(function(){
                     $thisWeekBtn = $("#thisWeekBtn");
                     $nextBtnBtn = $("#nextBtnBtn");
                     $infoTest = $("#infoTest").get(0);
+                    $JStrack1 = $("#JStrack1");
 
         }();//end set html objects
 
@@ -30,14 +32,23 @@ $(function(){
                 type: "GET",
                 dataType: "json",
                 url: 'info.json',
-                success: 1,
+                success: 1
                 }).done(function ( json ) {
                     events = json[0].events;
+                    showInfo(json);
+               // console.log(events);
+            })
+              .fail(function (XMLHttpRequest, textStatus, errorThrown){
+                alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                console.error("Status: " + textStatus + " , Error: " + errorThrown)
+            })
 
-                console.log(events);
-            });
+                function showInfo(json){
+                    console.log("Title: " + events[0].title)
+                    $(".JStrack1")
+                        .append(events[0].title);
 
-
+                };
 
      /*       function getInfoJson(url){}
 
