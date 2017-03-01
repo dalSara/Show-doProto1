@@ -1,34 +1,31 @@
 <!-- this component shows the info in the calender -->
 
-<div class="table table-responsive">
-
+<div class="table">
 
     <table>
-
 
         <tr>
 
           <td class="cal JStrack1"></td>
           <td class="cal JStrack2"></td>
           <td class="cal JStrack4"></td>
-          <td class="cal">Gulp</td>
-          <td class="cal">Kake bakeing</td>
+          <td class="cal JStrack7"></td>
+          <td class="cal JStrack9"></td>
         </tr>
 
         <tr>
           <td class="cal JStrack1"></td>
           <td class="cal JStrack2"></td>
           <td class="cal JStrack5"></td>
-          <td class="cal">konkuranse i kaffe drikking</td>
-          <td class="cal">Kake bakeing</td>
+          <td class="cal JStrack8"></td>
+          <td class="cal JStrack10"></td>
         </tr>
 
         <tr>
           <td class="cal JStrack1"></td>
           <td class="cal JStrack3"></td>
-          <td class="cal">Gameplan</td>
-          <td class="cal">Gulp</td>
-          <td class="cal">Kake bakeing</td>
+          <td class="cal JStrack6"></td>
+          <td class="cal JStrack11"></td>
         </tr>
     </table>
 </div>
@@ -40,9 +37,6 @@ $(function(){
             var $thisWeekBtn;
             var $nextBtn;
             var $infoTest;
-            var $JStrack1;
-
-
 
 
             var init = function(){
@@ -52,7 +46,7 @@ $(function(){
                     $thisWeekBtn = $("#thisWeekBtn");
                     $nextBtnBtn = $("#nextBtnBtn");
                     $infoTest = $("#infoTest").get(0);
-                    $JStrack1 = $("#JStrack1");
+
 
         }();//end set html objects
 
@@ -80,32 +74,29 @@ $(function(){
 
                 function showInfo(json){
                     $(".JStrack1")
-                        .append(events[0].title + " ", events[0].room);
+                        .append(events[0].title + ("<br>") + " Room: ", events[0].room);
                     $(".JStrack2")
-                        .append(events[1].title + " ", events[1].room);
+                        .append(events[1].title + ("<br>") + " Room: ", events[1].room);
                     $(".JStrack3")
-                        .append(events[2].title + " ", events[2].room);
+                        .append(events[2].title + ("<br>") + " Room: ", events[2].room);
                     $(".JStrack4")
-                        .append(events[3].title + " ", events[3].room);
+                        .append(events[3].title + ("<br>") + " Room: ", events[3].room);
                     $(".JStrack5")
-                        .append(events[4].title + " ", events[4].room);
+                        .append(events[4].title + ("<br>") + " Room: ", events[4].room);
+                    $(".JStrack6")
+                        .append(events[5].title + ("<br>") + " Room: ", events[5].room);
+                    $(".JStrack7")
+                        .append(events[6].title + ("<br>") + " Room: ", events[6].room);
+                    $(".JStrack9")
+                        .append(events[7].title + ("<br>") + " Room: ", events[7].room);
+                    $(".JStrack8")
+                        .append(events[8].title + ("<br>") + " Room: ", events[8].room);
+                    $(".JStrack10")
+                        .append(events[9].title + ("<br>") + " Room: ", events[9].room);
                 };
 
-     /*       function getInfoJson(url){}
-
-
-
-        $.ajax({
-            type: "GET",
-            dataType: "json",
-            url: infoUrl ,
-            data: data,
-            success: success
-            });
-
-        */
 
         }());
-        //delete
+
 
 </script>
