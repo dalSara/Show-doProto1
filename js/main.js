@@ -1,3 +1,11 @@
+//--------GET COMPONENTS
+$("#header").load("components/header.html");
+$("#navigation").load("components/navigation.html");
+$("#calender").load("components/calender.html");
+//$("#calenderFlexbox").load("components/calender-flexbox.html");
+$("#list").load("components/list.html");
+//--------end GET COMPONENTS
+
 $(function() {
 
     //HTML objects
@@ -25,22 +33,15 @@ $(function() {
 
     //init
     var init = function(){
-        //--------GET COMPONENTS
-        $("#header").load("components/header.html");
-        $("#navigation").load("components/navigation.html");
-        $("#calender").load("components/calender.html");
-        //$("#calenderFlexbox").load("components/calender-flexbox.html");
-        $("#list").load("components/list.html");
-        //--------end GET COMPONENTS
-
         setHTMLObjects();
         setEvents();
     }();//end init
 
+    //--------SCROLL TO MORE INFO
     function scrollToMoreInfo(){
-        $('html, body').animate({
-            scrollTop: $('#gitList').offset().top }, 2000);
-    }
+        $('html, body').animate({ scrollTop: $('#gitList').offset().top }, 2000);
+        alert('Test: scrollToMoreInfo');
+    }//--------end SCROLL TO TOP MORE INFO
 
     //--------SCROLL TO TOP
     //Check to see if the window is top if not then display button
@@ -51,7 +52,6 @@ $(function() {
             $('.scrollToTopBtn').fadeOut();
         }
     });
-
     //Click event to scroll to top
     function scrollUp(){
         $("html, body").animate({
