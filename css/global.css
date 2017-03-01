@@ -1235,7 +1235,7 @@ qa
 
 .qa li {
 	background: white;
-	margin-bottom: 3px;
+	margin-bottom: 10px;
 }
 
 .qa li > a {
@@ -1392,6 +1392,12 @@ List
     margin: 0 auto;
     display: block;
     opacity: 0.5;
+}
+
+@media (min-width: 900px) {
+	.cut-image {
+		height: 600px;
+	}
 }
 
 .image-to-cut {

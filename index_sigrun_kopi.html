@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html ng-app="showDoApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/global.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Test</title>
+
+</head>
+
+<body class="frontpage">
+
+    <!--HEADER-->
+    <header class="pageHeader">
+			<div class="wrapper basic">
+				<a class="logo" href="index.html">
+					<img src="../images/logo.svg" alt="Making Waves Logo">
+				</a>
+                <button>Menu</button>
+                <nav class="mainMenu">
+					<ul>
+                        <li><a href="#">Add track</a></li>
+					</ul>
+				</nav>
+			</div>
+    </header>
+<main>
+<div class="wrapper basic">
+
+        <!--
+        <input class="firstInfo" type="button" value="More info.."/>
+        -->
+
+        <!--CALENDER VIEW
+        <div ng-include="'components/calender.html'"></div>
+        -->
+
+        <!--CALENDER VIEW FLEXBOX  -->
+        <!-- this component shows the info in the calender with flexbox boostrap v4-alpha -->
+
+        <!--NAVIGATION -->
+        <div ng-include="'components/navigation.html'"></div>
+<!-- TABLE VISIBLE ONLY ON LARGE SCREENS -->
+<div id="cal-desktop">
+<table class="table-cal">
+    <!--
+    <thead class="thead-default">
+        <tr>
+            <th>Time</th>
+            <th>Track 1</th>
+            <th>Track 2</th>
+            <th>Track 3</th>
+            <th>Track 4</th>
+            <th>Track 5</th>
+        </tr>
+    </thead>
+    -->
+    <tbody>
+        <tr>
+            <th scope="row">1300-
+                <br>1345
+            </th>
+            <td class="cal" rowspan="3">
+                <strong>React/Redux</strong>
+                (track 1)
+            </td>
+            <td class="cal" rowspan="3">
+                <strong>Team Tools: Gameplan</strong>
+                (track 2)
+            </td>
+            <td class="cal" rowspan="2">
+                <strong>Elasticsearch Class</strong>
+                (track 3)
+            </td>
+            <td class="cal" rowspan="2">
+                <strong>Azure</strong>
+                (track 4)
+            </td>
+            <td class="cal" rowspan="1">
+                <strong>New Digital Product Review</strong>
+                (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1400-
+                <br>1445
+            </th>
+            <td class="cal">
+                <strong>Co-creation</strong>
+                (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1500-
+                <br>1545
+            </th>
+            <td class="cal">
+                <strong>Elasticsearch Class </strong>
+                (Track 3)
+            </td>
+            <td style="background: white"></td>
+            <td class="cal">
+                <strong>Classic project setup to product thinking</strong>
+                (track 5)
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<!-- DIV VISIBLE ONLY ON SMALL SCREENS -->
+<div id="cal-mobile">
+    <div id="main">
+        <div>
+          <div class="track-time-mob">1300-<br>1345</div>
+        </div>
+        <div>
+                <div class="track-mob">
+                    React/Redux
+                </div>
+                <div class="track-mob">
+                    Team tools
+                </div>
+                <div class="track-mob">
+                    Elastic search Class
+                </div>
+                <div class="track-mob">
+                    Azure tools
+                </div>
+                <div class="track-mob">
+                    New Digital Products
+                </div>
+        </div>
+    </div>
+
+    <div id="main">
+            <div>
+              <div class="track-time-mob">1400-<br>1445</div>
+            </div>
+            <div>
+                <div class="track-mob">
+                    React/Redux
+                </div>
+            </div>
+    </div>
+
+    <div id="main">
+            <div>
+              <div class="track-time-mob">1500-<br>1545</div>
+            </div>
+            <div>
+                    <div class="track-mob">
+                        Elastic Search Class
+                    </div>
+                    <div class="track-mob">
+                        Classic project setup to product thinking
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+            <section class="qa" ng-controller="ShowDoController as ShowDoCtrl">
+                <ul>
+                    <li ng-repeat="track in tracks">
+                        <figure class="cut-image">
+                            <img ng-src="{{track.imgSrc}}" alt="Eventbilde til {{track.title}}" class="image-to-cut">
+                        </figure>
+                        <a href="">
+                            <h3>{{track.title}}</h3>
+
+                        </a>
+                        <div>
+                            <p>{{track.expect}}</p>
+                            <p><strong>Where:</strong> {{track.room}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </main><!--end container-->
+
+    <!--scrollToTop button-->
+    <a href="#" class="scrollToTopBtn">
+        <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+    </a><!--end scrollToTop button-->
+
+
+
+    <script src="/node_modules/angular/angular.min.js"></script>
+
+    <script src="/js/functions.js" type="text/javascript"></script>
+
+    <script>
+        (function(){
+        var showDoApp = angular.module("showDoApp", []);
+
+        showDoApp.controller("ShowDoController", ['$scope', '$http', function($scope, $http){
+            $scope.tracks = [
+                {
+                title: 'React/Redux - a comprehensive introduction',
+                expect: "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
+                room: "Kantina",
+                numberOfPartic: "23",
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event1.jpg"
+              },
+              {
+                title: 'Team Tools: Gameplan',
+                expect: 'Something!',
+                room: "Stallen",
+                numberOfPartic: "23",
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event2.jpg"
+              },
+                                {
+                title: 'Elastic Search Class',
+                expect: "When you have finished this class, you should have a clear understanding and overview of what React is, the three different kind of React components that we have, React Lifecycle, what problems we run into using React only applications, and how Redux can help avoiding these problems. You will also get an introduction to some ES6 (Ecma Script 2016) need-to-know basics to help understand the React/Redux documentation better.",
+                room: "Kantina",
+                numberOfPartic: "23",
+                prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
+                imgSrc: "img/event3.png"
+              }
+            ];
+
+
+
+
+             //scrollTo more info
+            $scope.scrollTo = function(id){
+                $location.hash(id);
+                $anchorScroll();
+            };
+            //end scrollTo more info
+
+            }]);//end showDoApp
+
+        })();//end ShowDoController
+
+
+
+    </script>
+
+
+</body>
+
+</html>
