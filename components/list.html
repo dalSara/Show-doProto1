@@ -1,9 +1,10 @@
 <!-- this component is showing the info in the list -->
 
+
 <section ng-controller="ShowDoController as ShowDoCtrl">
     <ul class="list-unstyled">
-        <li ng-repeat="track in tracks" ng-style="{'background-image': 'url(' + track.imgSrc + ')'}">
-            <!--<div><img ng-src="{{track.imgSrc}}" alt="Eventbilde til {{track.title}}" class="img-fluid"></div>-->
+        <li ng-repeat="track in tracks">
+
             <div class="tracks">
             <div class="d-flex flex-row justify-content-between">
                 <div class="p-2">
@@ -24,22 +25,4 @@
     </ul>
 </section>
 
-<!-- _CARD LIST STYLE_
-<section ng-controller="ShowDoController as ShowDoCtrl">
-    <ul class="list-unstyled">
-        <li ng-repeat="track in tracks">
 
-            <div class="card mb-3">
-                <img ng-src="{{track.imgSrc}}" alt="Eventbilde til {{track.title}}" class="card-img-top" >
-                <div class="card-block">
-                    <h4 class="card-title">{{track.title}}</h4>
-                    <p ng-click="showDetails = ! showDetails"><i ng-model="collapsed"
-                        ng-click="collapsed=!collapsed"
-                        ng-class="{'fa fa-angle-up fa-2x':collapsed,'fa fa-angle-down fa-2x':!collapsed}" class="track-arrow" aria-hidden="true"></i></p>
-                    <p class="card-text track-details" ng-class="{ 'hidden': ! showDetails }">{{track.expect}}</p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</section>
--->

@@ -10,25 +10,32 @@
 
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Test</title>
 
 </head>
 
-<body>
+<body class="frontpage">
 
     <!--HEADER-->
-    <div ng-include="'components/header.html'"></div>
+    <header class="pageHeader">
+			<div class="wrapper basic">
+				<a class="logo" href="index.html">
+					<img src="../images/logo.svg" alt="Making Waves Logo">
+				</a>
+                <button>Menu</button>
+                <nav class="mainMenu">
+					<ul>
+                        <li><a href="#">Add track</a></li>
+					</ul>
+				</nav>
+			</div>
+    </header>
+<main>
+<div class="wrapper basic">
 
-    <div class="container">
-        <!--NAVIGATION-->
-        <div ng-include="'components/navigation.html'"></div>
         <!--
         <input class="firstInfo" type="button" value="More info.."/>
         -->
@@ -38,19 +45,150 @@
         -->
 
         <!--CALENDER VIEW FLEXBOX  -->
-        <div ng-include="'components/calender-flexbox.html'"></div>
+        <!-- this component shows the info in the calender with flexbox boostrap v4-alpha -->
 
-        <!--
-        <p class="lead"><a href="test">Legg til track</a></p>
-        -->
+        <!--NAVIGATION -->
+        <div ng-include="'components/navigation.html'"></div>
+<!-- TABLE VISIBLE ONLY ON LARGE SCREENS -->
+<div id="cal-desktop">
+<table class="table-cal">
+    <!--
+    <thead class="thead-default">
+        <tr>
+            <th>Time</th>
+            <th>Track 1</th>
+            <th>Track 2</th>
+            <th>Track 3</th>
+            <th>Track 4</th>
+            <th>Track 5</th>
+        </tr>
+    </thead>
+    -->
+    <tbody>
+        <tr>
+            <th scope="row">1300-
+                <br>1345
+            </th>
+            <td class="cal" rowspan="3">
+                <strong>React/Redux</strong>
+                (track 1)
+            </td>
+            <td class="cal" rowspan="3">
+                <strong>Team Tools: Gameplan</strong>
+                (track 2)
+            </td>
+            <td class="cal" rowspan="2">
+                <strong>Elasticsearch Class</strong>
+                (track 3)
+            </td>
+            <td class="cal" rowspan="2">
+                <strong>Azure</strong>
+                (track 4)
+            </td>
+            <td class="cal" rowspan="1">
+                <strong>New Digital Product Review</strong>
+                (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1400-
+                <br>1445
+            </th>
+            <td class="cal">
+                <strong>Co-creation</strong>
+                (track 5)
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1500-
+                <br>1545
+            </th>
+            <td class="cal">
+                <strong>Elasticsearch Class </strong>
+                (Track 3)
+            </td>
+            <td style="background: white"></td>
+            <td class="cal">
+                <strong>Classic project setup to product thinking</strong>
+                (track 5)
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<!-- DIV VISIBLE ONLY ON SMALL SCREENS -->
+<div id="cal-mobile">
+    <div id="main">
+        <div>
+          <div class="track-time-mob">1300-<br>1345</div>
+        </div>
+        <div>
+                <div class="track-mob">
+                    React/Redux
+                </div>
+                <div class="track-mob">
+                    Team tools
+                </div>
+                <div class="track-mob">
+                    Elastic search Class
+                </div>
+                <div class="track-mob">
+                    Azure tools
+                </div>
+                <div class="track-mob">
+                    New Digital Products
+                </div>
+        </div>
+    </div>
+
+    <div id="main">
+            <div>
+              <div class="track-time-mob">1400-<br>1445</div>
+            </div>
+            <div>
+                <div class="track-mob">
+                    React/Redux
+                </div>
+            </div>
+    </div>
+
+    <div id="main">
+            <div>
+              <div class="track-time-mob">1500-<br>1545</div>
+            </div>
+            <div>
+                    <div class="track-mob">
+                        Elastic Search Class
+                    </div>
+                    <div class="track-mob">
+                        Classic project setup to product thinking
+                    </div>
+                </div>
+            </div>
+</div>
 
 
+            <section class="qa" ng-controller="ShowDoController as ShowDoCtrl">
+                <ul>
+                    <li ng-repeat="track in tracks">
+                        <figure class="cut-image">
+                            <img ng-src="{{track.imgSrc}}" alt="Eventbilde til {{track.title}}" class="image-to-cut">
+                        </figure>
+                        <a href="">
+                            <h3>{{track.title}}</h3>
 
-        <!--LIST VIEW-->
-        <div ng-include="'components/list.html'"></div>
+                        </a>
+                        <div>
+                            <p>{{track.expect}}</p>
+                            <p><strong>Where:</strong> {{track.room}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
-
-    </div><!--end container-->
+    </main><!--end container-->
 
     <!--scrollToTop button-->
     <a href="#" class="scrollToTopBtn">
@@ -60,8 +198,8 @@
 
 
     <script src="/node_modules/angular/angular.min.js"></script>
-    <script src="/js/main.js"></script>
 
+    <script src="/js/functions.js" type="text/javascript"></script>
 
     <script>
         (function(){
@@ -80,7 +218,7 @@
               {
                 title: 'Team Tools: Gameplan',
                 expect: 'Something!',
-                room: "Kantina",
+                room: "Stallen",
                 numberOfPartic: "23",
                 prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
                 imgSrc: "img/event2.jpg"
@@ -91,8 +229,8 @@
                 room: "Kantina",
                 numberOfPartic: "23",
                 prereq: "Curiosity and interest in learning how to program React in a structural and separation-of concerning way.",
-                imgSrc: "img/event1.png"
-              },
+                imgSrc: "img/event3.png"
+              }
             ];
 
 

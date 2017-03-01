@@ -138,17 +138,15 @@ body {
     max-height: 0;
     }
 
-.scrollToTopBtn{
-    /*text-align: center;*/
-    /*position: relative;*/
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: none;
-    color: rgb(0, 0, 0);
-}
-
-
+    .scrollToTopBtn{
+        /*text-align: center;*/
+        /*position: relative;*/
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+        color: rgb(0, 0, 0);
+    }
 
 
 }//End body
