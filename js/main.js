@@ -1,15 +1,23 @@
-$(document).ready(function() {
+$(function() {
 
     //HTML objects
+    var $gitCal;
+    var $gitList;
     var $scrollToTopBtn;
 
     //Set HTML objects
     var setHTMLObjects = function(){
+        $gitCal = $("#gitCal");
+        $gitList = $("#gitList");
         $scrollToTopBtn = $("#scrollToTopBtn");
     };//end Set HTML objects
 
     //Set events
     var setEvents = function(){
+        $gitCal.on("click", function(){
+            scrollToMoreInfo();
+        });
+
         $scrollToTopBtn.on("click", function(){
             scrollUp();
         });
@@ -28,6 +36,11 @@ $(document).ready(function() {
         setHTMLObjects();
         setEvents();
     }();//end init
+
+    function scrollToMoreInfo(){
+        $('html, body').animate({
+            scrollTop: $('#gitList').offset().top }, 2000);
+    }
 
     //--------SCROLL TO TOP
     //Check to see if the window is top if not then display button
