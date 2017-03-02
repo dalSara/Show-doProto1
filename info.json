@@ -13,7 +13,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "large",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "3 hours"
             },
             {
                 "title": "Team Tools: Gameplan",
@@ -26,7 +27,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "Large",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "3 hours"
             },
             {
                 "title": "Azure:A high-level view at the Microsoft's Cloud offering",
@@ -39,7 +41,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
                 "title": "Elasticsearch Class Part 1",
@@ -52,7 +55,8 @@
                 "image": "",
                 "else": "This is a test run of a course we will run at NTNU https://online.ntnu.no/events/373/elasticsearch-sok-og-dataanalyse-med-making-waves/",
                 "type": "Medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
                 "title": "Elasticsearch Class part 1(supervised training)",
@@ -65,7 +69,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                "duration": "1 hour"
 
             },
             {
@@ -79,7 +84,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Co-creation: Help customer create their own frontpage. Case from FHI",
@@ -92,7 +98,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "14.00"
+                "startTime": "14.00",
+                "duration": "1 hour"
             },
             {
                 "title": "The journey from classic project setup to product thinking in Nordic Choice Hotels",
@@ -105,7 +112,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                "duration": "1 hour"
             }
         ]
     },
@@ -114,7 +122,7 @@
         "date" : "10.03.17",
         "events" : [
             {
-                "title": "Introduksjon til Git Arne og Carl-Erik",
+                "title": "Introduksjon til Git",
                 "room": "303",
                 "numberOfPartic": "10",
                 "prereq": "Nothing in particular.",
@@ -122,9 +130,10 @@
                 "host": "Arne og Carl-Erik",
                 "whoJoin": "Anyone who wants to learn more about Git",
                 "image": "",
-                "else": "Stare at the wall, play with food and get confused by dust. ",
+                "else": "Stare at the wall, play with food and get confused by dust.",
                 "type": "large",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "3 hours"
             },
             {
                 "title": "Toolset 2017: Deepcrawl - intro to premium SEO/Insights tool.",
@@ -137,7 +146,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "3 hours"
             },
             {
                 "title": "OFFSET - Conference report.",
@@ -150,7 +160,8 @@
                 "image": "",
                 "else": "Kitten is playing with dead mouse" ,
                 "type": "medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
                 "title": "WISHLIST: DESIGNING 404",
@@ -163,10 +174,11 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
-                "title": "Cybernetic architectures (building feedback into the system design)Small",
+                "title": "Cybernetic architectures (building feedback into the system design)",
                 "room": "201",
                 "numberOfPartic": "-",
                 "prereq": "Flee in terror at cucumber discovered on floor. ",
@@ -176,7 +188,8 @@
                 "image": "",
                 "else": "Give attitude spill litter box, scratch at owner, destroy all furniture, especially couch where is my slave? I'm getting hungry my slave human didn't give me any food so i pooped on the floor, yet chew iPad power cord. " ,
                 "type": "small",
-                "startTime": "14.00"
+                "startTime": "14.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Interaction design + SEO; case presentation (Meny)",
@@ -189,7 +202,8 @@
                 "image": "",
                 "else": " i tell my human nap all day, for hack up furballs. " ,
                 "type": "small",
-                "startTime": "14.00"
+                "startTime": "14.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Teknisk introduksjon til Azure",
@@ -202,10 +216,11 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                "duration": "1 hour"
             },
             {
-                "title": "Google Design Sprint. Case from Ruter. Large.",
+                "title": "Google Design Sprint. Case from Ruter.",
                 "room": "333",
                 "numberOfPartic": "7",
                 "prereq": "With tail in the air licks paws inspect anything brought into the house, for eat from dog's food",
@@ -215,7 +230,8 @@
                 "image": "",
                 "else": "Playing with balls of wool kitty scratches couch bad kitty sweet beast. Russian blue." ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                "duration": "1 hour"
             }
         ]
     },
@@ -233,7 +249,8 @@
                 "image": "",
                 "else": "toilet paper lick the other cats for Gate keepers of hell" ,
                 "type": "large",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "3 hours"
             },
             {
                 "title": "CONTENTFUL: product/technology workshop",
@@ -246,7 +263,8 @@
                 "image": "",
                 "else": "Meow all night having their mate disturbing sleeping humans i am the best under the bed leave fur on owners clothes for licks paws sit on the laptop. " ,
                 "type": "medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
                 "title": "Toolset 2017: Supermetrics & Geckoboard for live analytics dashboards (Ruter case).",
@@ -259,7 +277,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "medium",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "2 hours"
             },
             {
                 "title": "CONTENTFUL: product intro for non-techies ",
@@ -272,7 +291,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Introduction to Azure Data Lake",
@@ -285,7 +305,8 @@
                 "image": "",
                 "else": "Playing with balls of wool kitty scratches couch bad kitty sweet beast." ,
                 "type": "small",
-                "startTime": "13.00"
+                "startTime": "13.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Design for Display",
@@ -298,7 +319,8 @@
                 "image": "",
                 "else": " Chew on cable jump around on couch, meow constantly until given food, purrr purr littel cat, little cat purr purr and hopped up on catnip.",
                 "type": "small",
-                "startTime": "14.00"
+                "startTime": "14.00",
+                "duration": "1 hour"
             },
             {
                 "title": "Highlights from elastic{on} 2017",
@@ -311,7 +333,8 @@
                 "image": "",
                 "else": "Eat grass, throw it back up" ,
                 "type": "small",
-                "startTime": "14.00"
+                "startTime": "14.00",
+                "duration": "1 hour"
             },
             {
                 "title": "How can we work with a Pro bono project in MW by using Show & Do? (Service Design)",
@@ -324,7 +347,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                "duration": "1 hour"
             },
              {
                 "title": "Show the new MW brand when finished",
@@ -337,7 +361,8 @@
                 "image": "",
                 "else": "" ,
                 "type": "small",
-                "startTime": "15.00"
+                "startTime": "15.00",
+                 "duration": "1 hour"
             }
 
         ]
