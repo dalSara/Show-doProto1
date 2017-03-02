@@ -17,3 +17,127 @@
 </div>
 
 <section id="infoTest"></section>
+
+<script>
+$(function(){
+
+    //htmlObjekter
+    var $prevWeekBtn;
+    var $thisWeekBtn;
+    var $nextWeekBtn;
+
+
+
+    var init = function(){
+
+        var setHTMLObjects = function(){
+            $prevWeekBtn = $("#prevWeekBtn");
+            $thisWeekBtn = $("#thisWeekBtn");
+            $nextWeekBtn = $("#nextWeekBtn");
+
+        }();//end set html objects
+
+
+        var setEvents = function(){
+            $thisWeekBtn.on("click", function(){
+                showThisWeek();
+            });
+
+            $prevWeekBtn.on("click", function(){
+                showPrevWeek();
+            });
+
+        };//end setEvents
+
+        showNextWeek();
+
+        }();//end init
+
+    var events = [];
+    var date = [];
+
+
+
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: 'info.json',
+        success: 1
+    }).done(function ( json ) {
+        events = json[index].events;
+        date = json[index].date;
+        showInfo(json);
+        showThisWeek(json);
+        showNextWeek(json);
+        showPrevWeek(json);
+
+    })
+        .fail(function (XMLHttpRequest, textStatus, errorThrown){
+        alert("Status: " + textStatus); alert("Error: " + errorThrown);
+        console.error("Status: " + textStatus + " , Error: " + errorThrown)
+    })
+
+
+
+    var index = [1];
+
+    function showThisWeek(json){
+        index[2];
+       alert("bajs");
+    };//end thisWeek
+
+    function showPrevWeek(json){
+        index = (index ++);
+    };//end ShowPrevWeek
+
+    function showNextWeek(json){
+        $("#nextWeekBtn").onclick, function(){
+            alert("bajsbajs");
+            index[2]
+        };
+    };
+
+
+
+
+    /*
+        function showNextWeek(json){
+       alert("bajs");
+ .on("click", function(){
+                showNextWeek();
+    };//end ShowNextWeek
+
+var antallPersoner = personslisteJSON.personliste.length;
+for(var i = 0; i < antallPersoner; i++){
+var fornavn = personlisteJSON.personliste[i].fornavn;
+//for eksempel skrive ut fornavn
+
+*/
+
+
+     function showInfo(json){
+        $(".JStrack1")
+            .append(events[0].title + ("<br>") + " Room: ", events[0].room);
+        $(".JStrack2")
+            .append(events[1].title + ("<br>") + " Room: ", events[1].room);
+        $(".JStrack3")
+            .append(events[2].title + ("<br>") + " Room: ", events[2].room);
+        $(".JStrack4")
+            .append(events[3].title + ("<br>") + " Room: ", events[3].room);
+        $(".JStrack5")
+            .append(events[4].title + ("<br>") + " Room: ", events[4].room);
+        $(".JStrack6")
+            .append(events[5].title + ("<br>") + " Room: ", events[5].room);
+        $(".JStrack7")
+            .append(events[6].title + ("<br>") + " Room: ", events[6].room);
+        $(".JStrack9")
+            .append(events[7].title + ("<br>") + " Room: ", events[7].room);
+    }
+
+
+}());
+
+
+
+
+</script>
