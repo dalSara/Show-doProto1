@@ -1,9 +1,9 @@
 $(function(){
 
     //htmlObjekter
-    var $prevBtn;
+    var $prevWeekBtn;
     var $thisWeekBtn;
-    var $nextBtn;
+    var $nextWeekBtn;
     var $infoTest;
 
 
@@ -36,6 +36,7 @@ $(function(){
 
 
     var events = [];
+    var index = [1]
 
 
     $.ajax({
@@ -44,7 +45,7 @@ $(function(){
         url: 'info.json',
         success: 1
     }).done(function ( json ) {
-        events = json[1].events;
+        events = json[index].events;
         showInfo(json);
         showThisWeek(json);
         showNextWeek(json);
