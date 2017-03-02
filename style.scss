@@ -757,6 +757,7 @@ Flex for rows in calendar
     padding: 1em;
     margin: 0.5em;
     border-radius: 10px;
+    font-size: 1.1em;
 }
 
 .track-time-mob {
@@ -803,6 +804,7 @@ List
 }
 
 
+
 /********************************************
 show/hide desktop cal & mobile cal
 ********************************************/
@@ -811,10 +813,26 @@ show/hide desktop cal & mobile cal
     #cal-mobile {
         display: none;
     }
+
+    .duration{
+        display: none;
+    }
+
+
 }
 
 @media screen and (max-width: 768px) {
     #cal-desktop {
+        display: none;
+    }
+    .duration {
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: right;
+    opacity: 0.8;
+    }
+
+    .rooms {
         display: none;
     }
 }
@@ -850,4 +868,61 @@ td {
         background: white;
         color: #242424;
     }
+}
+
+/********************************************
+going toggle yes/no button
+********************************************/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "NO";
+  height: 42px;
+  width: 62px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #06f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(68px);
+  -ms-transform: translateX(68px);
+  transform: translateX(68px);
+        content: "YES";
 }
