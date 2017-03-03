@@ -711,3 +711,27 @@ input:checked + .slider:before {
   -ms-transform: translateX(68px);
   transform: translateX(68px);
   content: "YES"; }
+
+/********************************************
+inputs
+********************************************/
+button {
+  font-family: "Volte Semibold";
+  font-size: inherit;
+  line-height: inherit;
+  background-color: white;
+  color: #06f;
+  border: 3px solid #06f;
+  border-radius: 0;
+  padding: 10px 20px;
+  margin: 0;
+  -webkit-appearance: none;
+  cursor: pointer; }
+
+button.subtle {
+  padding: 5px 10px;
+  border: none;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  color: inherit;
+  font-size: .778rem; }
