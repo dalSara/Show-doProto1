@@ -3,7 +3,7 @@ $("#header").load("components/header.html");
 $("#navigation").load("components/navigation.html");
 $("#calender").load("components/calender.html");
 //$("#calenderFlexbox").load("components/calender-flexbox.html");
-$("#list").load("components/list.html");
+//$("#list").load("components/list.html");
 //--------end GET COMPONENTS
 
 $(function() {

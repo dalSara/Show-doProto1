@@ -39,11 +39,11 @@ $(function(){
 
     $.ajax({
         type: "GET",
-        data: {hendelser: JSON.stringify(events) },
         dataType: "json",
         url: 'info.json',
         success: 1
-    }).done(function ( json ) {
+    })
+        .done(function (json) {
         events = json[index].events;
         showInfo(json);
         showThisWeek(json);
@@ -56,7 +56,7 @@ $(function(){
         .fail(function (XMLHttpRequest, textStatus, errorThrown){
         alert("Status: " + textStatus); alert("Error: " + errorThrown);
         console.error("Status: " + textStatus + " , Error: " + errorThrown)
-    })
+    });
 
     function showInfo(json){
         $(".JStrack1")
@@ -90,54 +90,81 @@ $(function(){
 
     }//end ShowNextWeek
 
+    //LIST
     function showEventList(json){
 
         console.log(json[index]);
 
-        $(json[index].events).each(function(){
 
-            //--------EVENT
-            var $title = $("<h4>").html(this.title);
-            var $room = $("<p>").html("Room: " + this.room);
-            var $numberOfPartic = $("<p>").html("Number of participants: " + this.numberOfPartic);
-            var $prereq = $("<p>").html("Prerequisites: " + this.prereq);
-            var $expect = $("<p>").html("What to expect: " + this.expect);
-            var $host = $("<p>").html("Host: " + this.host);
-            var $whoJoin = $("<p>").html("Who should join? " + this.whoJoin);
-            var $image = $("<img>").html(this.image)
-            .addClass("image-to-cut");
-            var $elseText = $("<p>").html("Other information: " + this.elseText);
-            var $type = $("<p>").html("Size: " + this.type);
-            var $startTime = $("<p>").html("Starts: " + this.startTime);
-            //--------end EVENT
+        //EVENT #1
+        $("#listTitle1").append(events[0].title);
+        $("#listImg1").append(events[0].image);
+        $("#listExpect1").append(events[0].expect);
+        $("#listPrereq1").append(events[0].prereq);
+        $("#listWhoJoin1").append(events[0].whoJoin);
+        $("#listnumberOfPartic1").append("<strong>Number of participants: </strong>" + events[0].numberOfPartic);
+        $("#listHost1").append("<strong>Host: </strong>" +events[0].host);
+        $("#listDuration1").append(events[0].duration);
+        $("#listType1").append(events[0].type);
+        $("#listElseText1").append("<strong>Other info: </strong>" + events[0].else);
+        $("#listStartTime1").append("<strong>Starts: </strong>" + events[0].startTime);
+        $("#listRoom1").append("<strong>Where: </strong>" + events[0].room);
 
-            //--------HTML elements
-            var $event = $("<li>")
-                .css("background-color", "lightgray"); //Test color
+        //EVENT #2
+        $("#listTitle2").append(events[1].title);
+        $("#listImg2").append(events[1].image);
+        $("#listExpect2").append(events[1].expect);
+        $("#listPrereq2").append(events[1].prereq);
+        $("#listWhoJoin2").append(events[1].whoJoin);
+        $("#listnumberOfPartic2").append("<strong>Number of participants: </strong>" + events[1].numberOfPartic);
+        $("#listHost2").append("<strong>Host: </strong>" +events[1].host);
+        $("#listDuration2").append(events[1].duration);
+        $("#listType2").append(events[1].type);
+        $("#listElseText2").append("<strong>Other info: </strong>" + events[1].else);
+        $("#listStartTime2").append("<strong>Starts: </strong>" + events[1].startTime);
+        $("#listRoom2").append("<strong>Where: </strong>" + events[1].room);
 
-            var $figure = $("<figure>")
-                .addClass("cut-image"); //For image
+        //EVENT #3
+        $("#listTitle3").append(events[2].title);
+        $("#listImg3").append(events[2].image);
+        $("#listExpect3").append(events[2].expect);
+        $("#listPrereq3").append(events[2].prereq);
+        $("#listWhoJoin3").append(events[2].whoJoin);
+        $("#listnumberOfPartic3").append("<strong>Number of participants: </strong>" + events[2].numberOfPartic);
+        $("#listHost3").append("<strong>Host: </strong>" +events[2].host);
+        $("#listDuration3").append(events[2].duration);
+        $("#listType3").append(events[2].type);
+        $("#listElseText3").append("<strong>Other info: </strong>" + events[2].else);
+        $("#listStartTime3").append("<strong>Starts: </strong>" + events[2].startTime);
+        $("#listRoom3").append("<strong>Where: </strong>" + events[2].room);
 
-            var $moreInforLink = $("<a href=''>"); //Link for more info
-            var $moreInfo = $("<div>"); //More info
-            //--------end HTML elements
+        //EVENT #4
+        $("#listTitle4").append(events[3].title);
+        $("#listImg4").append(events[3].image);
+        $("#listExpect4").append(events[3].expect);
+        $("#listPrereq4").append(events[3].prereq);
+        $("#listWhoJoin4").append(events[3].whoJoin);
+        $("#listnumberOfPartic4").append("<strong>Number of participants: </strong>" + events[3].numberOfPartic);
+        $("#listHost4").append("<strong>Host: </strong>" +events[3].host);
+        $("#listDuration4").append(events[3].duration);
+        $("#listType4").append(events[3].type);
+        $("#listElseText4").append("<strong>Other info: </strong>" + events[3].else);
+        $("#listStartTime4").append("<strong>Starts: </strong>" + events[3].startTime);
+        $("#listRoom4").append("<strong>Where: </strong>" + events[3].room);
 
-            $event.append($title/*
-                $figure.append($image),
-                $moreInforLink.append($title),
-                $moreInfo.append(
-                    $room,
-                    $numberOfPartic,
-                    $prereq,
-                    $expect,
-                    $host,
-                    $whoJoin,
-                    $elseText,
-                    $type,
-                    $startTime)*/
-                         );
+        //EVENT #5
+        $("#listTitle5").append(events[4].title);
+        $("#listImg5").append(events[4].image);
+        $("#listExpect5").append(events[4].expect);
+        $("#listPrereq5").append(events[4].prereq);
+        $("#listWhoJoin5").append(events[4].whoJoin);
+        $("#listnumberOfPartic5").append("<strong>Number of participants: </strong>" + events[4].numberOfPartic);
+        $("#listHost5").append("<strong>Host: </strong>" +events[4].host);
+        $("#listDuration5").append(events[4].duration);
+        $("#listType5").append(events[4].type);
+        $("#listElseText5").append("<strong>Other info: </strong>" + events[4].else);
+        $("#listStartTime5").append("<strong>Starts: </strong>" + events[4].startTime);
+        $("#listRoom5").append("<strong>Where: </strong>" + events[4].room);
 
-            $listContent.append($event);
-        }); //end each loop
-    }
+    }//end LIST
 });
