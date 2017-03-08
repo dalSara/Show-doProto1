@@ -7,7 +7,6 @@ $(function(){
     var $infoTest;
     var $listContent;
 
-
     var init = function(){
 
         var setHTMLObjects = function(){

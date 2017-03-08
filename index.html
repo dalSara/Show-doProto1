@@ -1,55 +1,314 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <title>Show & Do</title>
 
-    <title>Test</title>
+    </head>
+    <body class="frontpage">
 
-</head>
-<body class="frontpage">
+        <!--------------------------------HEADER-------------------------------->
+        <div id="header">
+            <header class="pageHeader">
+                <div class="wrapper basic">
+                    <a class="logo" href="index.html">
+                        <img src="../images/logo.svg" alt="Making Waves Logo">
+                    </a>
+                    <button>Menu</button>
+                    <nav class="mainMenu">
+                        <ul>
+                            <li><a href="addTrack.html">Add track</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div><!--------------------------------end HEADER-------------------------------->
 
-    <!--HEADER-->
-    <div id="header"></div>
-    <main>
-        <div class="wrapper basic">
+        <main>
+            <div class="wrapper basic">
 
-        <!--NAVIGATION-->
-        <div id="navigation"></div>
+                <!--------------------------------NAVIGATION-------------------------------->
+                <div id="navigation">
+                    <div id="navWeek">
+                        <div><a id="prevBtn" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a></div>
+                        <div><a id="thisWeekBtn" href="#">This week</a></div>
+                        <div><a id="nextBtn" href="#">Next  <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                    </div>
+                </div><!--------------------------------end NAVIGATION-------------------------------->
 
-        <!--CALENDER VIEW-->
-        <div id="calender"></div>
+                <!--------------------------------CALENDER-------------------------------->
+                <div id="calender" >
+                    <!-- TABLE VISIBLE ONLY ON LARGE SCREENS -->
+                    <div id="cal-desktop">
+                        <table class="table-cal">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1300-
+                                        <br>1345
+                                    </th>
+                                    <td class="cal JStrack1" rowspan="3"></td>
+                                    <td class="cal JStrack2" rowspan="3"></td>
+                                    <td class="cal JStrack4" rowspan="2"></td>
+                                    <td class="cal JStrack3" rowspan="2"></td>
+                                    <td class="cal JStrack6" rowspan="1"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1400-
+                                        <br>1445
+                                    </th>
+                                    <td class="cal JStrack7"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1500-
+                                        <br>1545
+                                    </th>
+                                    <td class="cal JStrack5"></td>
+                                    <td style="background: white"></td>
+                                    <td class="cal JStrack8"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- end TABLE VISIBLE ONLY ON LARGE SCREENS -->
 
-        <!--CALENDER VIEW FLEXBOX
-        <div id="calender-flexbox"></div>-->
 
-        <!--ADD NEW TRACK
-        <p class="lead"><a href="test">Legg til track</a></p>-->
+                    <!-- DIV VISIBLE ONLY ON SMALL SCREENS -->
+                    <div id="cal-mobile">
+                        <div id="main">
+                            <div>
+                                <div class="track-time-mob">1300-<br>1345</div>
+                            </div>
+                            <div>
+                                <div class="track-mob JStrack1"></div>
+                                <div class="track-mob JStrack2"></div>
+                                <div class="track-mob JStrack3"></div>
+                                <div class="track-mob JStrack4"></div>
+                                <div class="track-mob JStrack6"></div>
+                            </div>
+                        </div>
 
-        <!--LIST VIEW-->
-        <!--<div id="list"></div>-->
+                        <div id="main">
+                            <div>
+                                <div class="track-time-mob">1400-<br>1445</div>
+                            </div>
+                            <div>
+                                <div class="track-mob JStrack7"></div>
+                            </div>
+                        </div>
 
-        </div><!--end container-->
-    </main><!--end main-->
+                        <div id="main">
+                            <div>
+                                <div class="track-time-mob">1500-<br>1545</div>
+                            </div>
+                            <div>
+                                <div class="track-mob JStrack5"></div>
+                                <div class="track-mob JStrack8"></div>
+                            </div>
+                        </div>
+                    </div><!-- end DIV VISIBLE ONLY ON SMALL SCREENS -->
+                </div><!--------------------------------end CALENDER-------------------------------->
 
-    <!--SCROLL TO TOP BUTTON-->
-    <a href="#" id="scrollToTopBtn">
-        <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
-    </a><!--end SCROLL TO TOP BUTTON-->
+                <!--------------------------------LIST-------------------------------->
+                <section class="qa">
+                    <ul> <!--id="listContent">-->
+                        <li><!--TRACK 1-->
+                            <figure class="cut-image">
+                                <img id="listImg1" class="image-to-cut" src="img/git.png">
+                            </figure>
 
+                            <a href=""><!--Dropdown-->
+                                <h3 id="listTitle1"></h3><!--TITLE-->
+                            </a>
 
-    <!--SCRIPT-->
-    <script src="/js/functions.js" type="text/javascript"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/json.js"></script>
-</body>
+                            <div class="flex-contain">
+                                <div>
+                                    <p id="listExpect1"></p>
+                                    <p id="listPrereq1"></p>
+                                    <p id="listWhoJoin1"></p>
+                                    <p id="listnumberOfPartic1"></p>
+                                    <p id="listHost1"></p>
+                                    <p id="listDuration1"></p>
+                                    <p id="listType1"></p>
+                                    <p id="listElseText1"></p>
+                                    <p id="listStartTime1"></p>
+                                    <p id="listRoom1"></p>
+                                </div>
+
+                                <!--SWITCH-->
+                                <div class="flex-item">
+                                    <p class="lead">Going?</p>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                    </label>
+
+                                </div><!--end SWITCH-->
+                            </div><!--end flex contain--->
+                        </li><!--end TRACK 1-->
+                        <li><!--TRACK 2-->
+                            <figure class="cut-image">
+                                <img id="listImg2" class="image-to-cut" src="">
+                            </figure>
+
+                            <a href=""><!--Dropdown-->
+                                <h3 id="listTitle2"></h3><!--TITLE-->
+                            </a>
+
+                            <div class="flex-contain">
+                                <div>
+                                    <p id="listExpect2"></p>
+                                    <p id="listPrereq2"></p>
+                                    <p id="listWhoJoin2"></p>
+                                    <p id="listnumberOfPartic2"></p>
+                                    <p id="listHost2"></p>
+                                    <p id="listDuration2"></p>
+                                    <p id="listType2"></p>
+                                    <p id="listElseText2"></p>
+                                    <p id="listStartTime2"></p>
+                                    <p id="listRoom2"></p>
+                                </div>
+
+                                <!--SWITCH-->
+                                <div class="flex-item">
+                                    <p class="lead">Going?</p>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                    </label>
+
+                                </div><!--end SWITCH-->
+                            </div><!--end flex contain--->
+                        </li><!--end TRACK 2-->
+                        <li><!--TRACK 3-->
+                            <figure class="cut-image">
+                                <img id="listImg3" class="image-to-cut" src="">
+                            </figure>
+
+                            <a href=""><!--Dropdown-->
+                                <h3 id="listTitle3"></h3><!--TITLE-->
+                            </a>
+
+                            <div class="flex-contain">
+                                <div>
+                                    <p id="listExpect3"></p>
+                                    <p id="listPrereq3"></p>
+                                    <p id="listWhoJoin3"></p>
+                                    <p id="listnumberOfPartic3"></p>
+                                    <p id="listHost3"></p>
+                                    <p id="listDuration3"></p>
+                                    <p id="listType3"></p>
+                                    <p id="listElseText3"></p>
+                                    <p id="listStartTime3"></p>
+                                    <p id="listRoom3"></p>
+                                </div>
+
+                                <!--SWITCH-->
+                                <div class="flex-item">
+                                    <p class="lead">Going?</p>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                    </label>
+
+                                </div><!--end SWITCH-->
+                            </div><!--end flex contain--->
+                        </li><!--end TRACK 3-->
+                        <li><!--TRACK 4-->
+                            <figure class="cut-image">
+                                <img id="listImg4" class="image-to-cut" src="">
+                            </figure>
+
+                            <a href=""><!--Dropdown-->
+                                <h3 id="listTitle4"></h3><!--TITLE-->
+                            </a>
+
+                            <div class="flex-contain">
+                                <div>
+                                    <p id="listExpect4"></p>
+                                    <p id="listPrereq4"></p>
+                                    <p id="listWhoJoin4"></p>
+                                    <p id="listnumberOfPartic4"></p>
+                                    <p id="listHost4"></p>
+                                    <p id="listDuration4"></p>
+                                    <p id="listType4"></p>
+                                    <p id="listElseText4"></p>
+                                    <p id="listStartTime4"></p>
+                                    <p id="listRoom4"></p>
+                                </div>
+
+                                <!--SWITCH-->
+                                <div class="flex-item">
+                                    <p class="lead">Going?</p>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                    </label>
+
+                                </div><!--end SWITCH-->
+                            </div><!--end flex contain--->
+                        </li><!--end TRACK 4-->
+                        <li><!--TRACK 5-->
+                            <figure class="cut-image">
+                                <img id="listImg5" class="image-to-cut" src="">
+                            </figure>
+
+                            <a href=""><!--Dropdown-->
+                                <h3 id="listTitle5"></h3><!--TITLE-->
+                            </a>
+
+                            <div class="flex-contain">
+                                <div>
+                                    <p id="listExpect5"></p>
+                                    <p id="listPrereq5"></p>
+                                    <p id="listWhoJoin5"></p>
+                                    <p id="listnumberOfPartic5"></p>
+                                    <p id="listHost5"></p>
+                                    <p id="listDuration5"></p>
+                                    <p id="listType5"></p>
+                                    <p id="listElseText5"></p>
+                                    <p id="listStartTime5"></p>
+                                    <p id="listRoom5"></p>
+                                </div>
+
+                                <!--SWITCH-->
+                                <div class="flex-item">
+                                    <p class="lead">Going?</p>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                    </label>
+
+                                </div><!--end SWITCH-->
+                            </div><!--end flex contain--->
+                        </li><!--end TRACK 5-->
+                    </ul>
+                </section>
+                <!--------------------------------end LIST-------------------------------->
+            </div><!--end container-->
+        </main><!--end main-->
+
+        <!--SCROLL TO TOP BUTTON-->
+        <a href="#" id="scrollToTopBtn">
+            <i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+        </a><!--end SCROLL TO TOP BUTTON-->
+
+        <!--SCRIPT-->
+        <!--<script src="/js/functions.js" type="text/javascript"></script>-->
+        <script src="/js/main.js"></script>
+        <!--<script src="/js/json.js"></script>-->
+    </body>
 </html>
