@@ -3,6 +3,10 @@ $(function() {
     //HTML objects
     var $gitCal;
     var $gitList;
+
+    var $JStrack1;
+    var $JSList1;
+
     var $scrollToTopBtn;
     var $prevWeekBtn;
     var $thisWeekBtn;
@@ -19,6 +23,8 @@ $(function() {
         var setHTMLObjects = function(){
             $gitCal = $("#gitCal");
             $gitList = $("#gitList");
+            $JStrack1 = $(".JStrack1");
+            $JSList1 = $("#JSList1");
             $scrollToTopBtn = $("#scrollToTopBtn");
             $prevWeekBtn = $("#prevWeekBtn");
             $thisWeekBtn = $("#thisWeekBtn");
@@ -29,9 +35,9 @@ $(function() {
 
         //Set events
         var setEvents = function(){
-            $gitCal.on("click", function(){
-                scrollToMoreInfo();
-            });
+         //   $JStrack1.on("click", function(){
+           //     scrollToMoreInfo();
+        //    });
             $scrollToTopBtn.on("click", function(){
                 scrollUp();
             });
@@ -80,21 +86,21 @@ $(function() {
 
     function showInfo(json){
         $(".JStrack1")
-            .append(events[0].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[0].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[0].duration + ("</div>"));
+            .append(("<a href='#JsScroll1' class='scrollTo'>") + events[0].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[0].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[0].duration + ("</div>") + ("</a>"));
         $(".JStrack2")
-            .append(events[1].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[1].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[1].duration + ("</div>"));
+            .append(("<a href='#JsScroll2' class='scrollTo'>") + events[1].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[1].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[1].duration + ("</div>") + ("</a>"));
         $(".JStrack3")
-            .append(events[2].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[2].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[2].duration + ("</div>"));
+            .append(("<a href='#JsScroll3' class='scrollTo'>") + events[2].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[2].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[2].duration + ("</div>") + ("</a>"));
         $(".JStrack4")
-            .append(events[3].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[3].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[3].duration + ("</div>"));
+            .append(("<a href='#JsScroll4' class='scrollTo'>") + events[3].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[3].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[3].duration + ("</div>") + ("</a>"));
         $(".JStrack5")
-            .append(events[4].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[4].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[4].duration + ("</div>"));
+            .append(("<a href='#JsScroll5' class='scrollTo'>") + events[4].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[4].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[4].duration + ("</div>") + ("</a>"));
         $(".JStrack6")
-            .append(events[5].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[5].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[5].duration + ("</div>"));
+            .append(("<a href='#JsScroll6' class='scrollTo'>") + events[5].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[5].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[5].duration + ("</div>") + ("</a>"));
         $(".JStrack7")
-            .append(events[6].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[6].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[6].duration + ("</div>"));
+            .append(("<a href='#JsScroll7' class='scrollTo'>") + events[6].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[6].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[6].duration + ("</div>") + ("</a>"));
         $(".JStrack8")
-            .append(events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>"));
+            .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
     };
 
     function showThisWeek(json){
@@ -118,7 +124,7 @@ $(function() {
     //LIST
     function showEventList(json){
 
-        console.log(json[index]);
+      //  console.log(json[index]);
 
         //EVENT #1
         $("#listTitle1").append(events[0].title);
@@ -192,24 +198,31 @@ $(function() {
     };//end LIST
 
 
-    //--------SCROLL TO MORE INFO
-    function scrollToMoreInfo(){
-        $('html, body').animate({ scrollTop: $('#gitList').offset().top }, 2000);
-        alert('Test: scrollToMoreInfo');
-    };//--------end SCROLL TO TOP MORE INFO
-
-
-    //--------SHOW MORE INFO (list view) (qa expansion)
-    $('.qa li > a').on('click', function (j) {
-        j.preventDefault();
-        $(this).closest('li').toggleClass('open');
-    });//--------end SHOW MORE INFO (qa expansion)
-
     //-------------Hamburger btn (aka "the Sigrun-Btn")------------------
     $('header button').on('click', function () {
 		$('header').toggleClass('open');
 	});
     //---- end Hamburger Btn
+
+    //--------SCROLL TO MORE INFO (scrolls from calender view, down to list view, on same topic.)
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
+    //--------end SCROLL TO MORE INFO
+
+
+    //--------SHOW MORE INFO (open list view) (qa expansion)
+    $('.qa li > a').on('click', function (j) {
+        j.preventDefault();
+        $(this).closest('li').toggleClass('open');
+    });//--------end SHOW MORE INFO (qa expansion)
 
     //--------SCROLL TO TOP
     //Check to see if the window is top if not then display button
