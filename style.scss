@@ -793,7 +793,7 @@ List
 
 @media (min-width: 900px) {
     .cut-image {
-        height: 600px;
+        height: 200px;
     }
 }
 
@@ -803,6 +803,25 @@ List
     left: 0;
 }
 
+.flex-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.flex-list-item {
+    width: auto;
+    height: auto;
+    align-items: baseline;
+}
+
+.going-size {
+    width: 450px;
+}
 
 
 /********************************************
@@ -835,6 +854,15 @@ show/hide desktop cal & mobile cal
     .rooms {
         display: none;
     }
+
+    .flex-list {
+        -webkit-flex-direction: column;
+    flex-direction: column;
+    }
+
+    .going-size {
+        width: auto;
+}
 }
 
 

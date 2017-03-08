@@ -132,7 +132,7 @@ $(function() {
         $("#listExpect1").append(events[0].expect);
         $("#listPrereq1").append(events[0].prereq);
         $("#listWhoJoin1").append(events[0].whoJoin);
-        $("#listnumberOfPartic1").append("<strong>Number of participants: </strong>" + events[0].numberOfPartic);
+        $("#listnumberOfPartic1").append(events[0].numberOfPartic);
         $("#listHost1").append("<strong>Host: </strong>" +events[0].host);
         $("#listDuration1").append(events[0].duration);
         $("#listType1").append(events[0].type);
@@ -195,6 +195,48 @@ $(function() {
         $("#listElseText5").append("<strong>Other info: </strong>" + events[4].else);
         $("#listStartTime5").append("<strong>Starts: </strong>" + events[4].startTime);
         $("#listRoom5").append("<strong>Where: </strong>" + events[4].room);
+
+        //EVENT #6
+        $("#listTitle6").append(events[5].title);
+        $("#listImg6").append(events[5].image);
+        $("#listExpect6").append(events[5].expect);
+        $("#listPrereq6").append(events[5].prereq);
+        $("#listWhoJoin6").append(events[5].whoJoin);
+        $("#listnumberOfPartic6").append("<strong>Number of participants: </strong>" + events[5].numberOfPartic);
+        $("#listHost6").append("<strong>Host: </strong>" +events[5].host);
+        $("#listDuration6").append(events[5].duration);
+        $("#listType6").append(events[5].type);
+        $("#listElseText6").append("<strong>Other info: </strong>" + events[5].else);
+        $("#listStartTime6").append("<strong>Starts: </strong>" + events[5].startTime);
+        $("#listRoom6").append("<strong>Where: </strong>" + events[5].room);
+
+        //EVENT #7
+        $("#listTitle7").append(events[6].title);
+        $("#listImg7").append(events[6].image);
+        $("#listExpect7").append(events[6].expect);
+        $("#listPrereq7").append(events[6].prereq);
+        $("#listWhoJoin7").append(events[6].whoJoin);
+        $("#listnumberOfPartic7").append("<strong>Number of participants: </strong>" + events[6].numberOfPartic);
+        $("#listHost7").append("<strong>Host: </strong>" +events[6].host);
+        $("#listDuration7").append(events[6].duration);
+        $("#listType7").append(events[6].type);
+        $("#listElseText7").append("<strong>Other info: </strong>" + events[6].else);
+        $("#listStartTime7").append("<strong>Starts: </strong>" + events[6].startTime);
+        $("#listRoom7").append("<strong>Where: </strong>" + events[6].room);
+
+        //EVENT #8
+        $("#listTitle8").append(events[7].title);
+        $("#listImg8").append(events[7].image);
+        $("#listExpect8").append(events[7].expect);
+        $("#listPrereq8").append(events[7].prereq);
+        $("#listWhoJoin8").append(events[7].whoJoin);
+        $("#listnumberOfPartic8").append("<strong>Number of participants: </strong>" + events[7].numberOfPartic);
+        $("#listHost8").append("<strong>Host: </strong>" +events[7].host);
+        $("#listDuration8").append(events[7].duration);
+        $("#listType8").append(events[7].type);
+        $("#listElseText8").append("<strong>Other info: </strong>" + events[7].else);
+        $("#listStartTime8").append("<strong>Starts: </strong>" + events[7].startTime);
+        $("#listRoom8").append("<strong>Where: </strong>" + events[7].room);
     };//end LIST
 
 

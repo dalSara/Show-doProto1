@@ -608,12 +608,29 @@ List
 
 @media (min-width: 900px) {
   .cut-image {
-    height: 600px; } }
+    height: 200px; } }
 
 .image-to-cut {
   position: absolute;
   top: 0;
   left: 0; }
+
+.flex-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  margin: 10px; }
+
+.flex-list-item {
+  width: auto;
+  height: auto;
+  align-items: baseline; }
+
+.going-size {
+  width: 450px; }
 
 /********************************************
 show/hide desktop cal & mobile cal
@@ -633,7 +650,12 @@ show/hide desktop cal & mobile cal
     text-align: right;
     opacity: 0.8; }
   .rooms {
-    display: none; } }
+    display: none; }
+  .flex-list {
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  .going-size {
+    width: auto; } }
 
 /********************************************
 table
