@@ -732,7 +732,7 @@ $(function() {
     //---- end Hamburger Btn
 
     //--------SCROLL TO MORE INFO (scrolls from calender view, down to list view, on same topic.)
-$('a[href^="#"]').on('click', function(event) {
+$('a[href^="&"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
         event.preventDefault();
