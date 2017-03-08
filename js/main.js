@@ -68,6 +68,7 @@ $(function() {
                     showEventList(json);
 
                     $prevBtn.on("click", function(){
+                        //CALENDER
                         $(".JStrack1").append().empty();
                         $(".JStrack2").append().empty();
                         $(".JStrack3").append().empty();
@@ -80,6 +81,113 @@ $(function() {
                         var prevIndex = [--index];
                         events = json[prevIndex].events;
                         showInfo(json[prevIndex]);
+
+                        //LIST
+                        $("#listTitle1").append().empty();
+                        $("#listImg1").append().empty();
+                        $("#listExpect1").append().empty();
+                        $("#listPrereq1").append().empty();
+                        $("#listWhoJoin1").append().empty();
+                        $("#listnumberOfPartic1").append().empty();
+                        $("#listHost1").append().empty();
+                        $("#listDuration1").append().empty();
+                        $("#listType1").append().empty();
+                        $("#listElseText1").append().empty();
+                        $("#listStartTime1").append().empty();
+                        $("#listRoom1").append().empty();
+
+                        $("#listTitle2").append().empty();
+                        $("#listImg2").append().empty();
+                        $("#listExpect2").append().empty();
+                        $("#listPrereq2").append().empty();
+                        $("#listWhoJoin2").append().empty();
+                        $("#listnumberOfPartic2").append().empty();
+                        $("#listHost2").append().empty();
+                        $("#listDuration2").append().empty();
+                        $("#listType2").append().empty();
+                        $("#listElseText2").append().empty();
+                        $("#listStartTime2").append().empty();
+                        $("#listRoom2").append().empty();
+
+                        $("#listTitle3").append().empty();
+                        $("#listImg3").append().empty();
+                        $("#listExpect3").append().empty();
+                        $("#listPrereq3").append().empty();
+                        $("#listWhoJoin3").append().empty();
+                        $("#listnumberOfPartic3").append().empty();
+                        $("#listHost3").append().empty();
+                        $("#listDuration3").append().empty();
+                        $("#listType3").append().empty();
+                        $("#listElseText3").append().empty();
+                        $("#listStartTime3").append().empty();
+                        $("#listRoom3").append().empty();
+
+                        $("#listTitle4").append().empty();
+                        $("#listImg4").append().empty();
+                        $("#listExpect4").append().empty();
+                        $("#listPrereq4").append().empty();
+                        $("#listWhoJoin4").append().empty();
+                        $("#listnumberOfPartic4").append().empty();
+                        $("#listHost4").append().empty();
+                        $("#listDuration4").append().empty();
+                        $("#listType4").append().empty();
+                        $("#listElseText4").append().empty();
+                        $("#listStartTime4").append().empty();
+                        $("#listRoom4").append().empty();
+
+                        $("#listTitle5").append().empty();
+                        $("#listImg5").append().empty();
+                        $("#listExpect5").append().empty();
+                        $("#listPrereq5").append().empty();
+                        $("#listWhoJoin5").append().empty();
+                        $("#listnumberOfPartic5").append().empty();
+                        $("#listHost5").append().empty();
+                        $("#listDuration5").append().empty();
+                        $("#listType5").append().empty();
+                        $("#listElseText5").append().empty();
+                        $("#listStartTime5").append().empty();
+                        $("#listRoom5").append().empty();
+
+                        $("#listTitle6").append().empty();
+                        $("#listImg6").append().empty();
+                        $("#listExpect6").append().empty();
+                        $("#listPrereq6").append().empty();
+                        $("#listWhoJoin6").append().empty();
+                        $("#listnumberOfPartic6").append().empty();
+                        $("#listHost6").append().empty();
+                        $("#listDuration6").append().empty();
+                        $("#listType6").append().empty();
+                        $("#listElseText6").append().empty();
+                        $("#listStartTime6").append().empty();
+                        $("#listRoom6").append().empty();
+
+                        $("#listTitle7").append().empty();
+                        $("#listImg7").append().empty();
+                        $("#listExpect7").append().empty();
+                        $("#listPrereq7").append().empty();
+                        $("#listWhoJoin7").append().empty();
+                        $("#listnumberOfPartic7").append().empty();
+                        $("#listHost7").append().empty();
+                        $("#listDuration7").append().empty();
+                        $("#listType7").append().empty();
+                        $("#listElseText7").append().empty();
+                        $("#listStartTime7").append().empty();
+                        $("#listRoom7").append().empty();
+
+                        $("#listTitle8").append().empty();
+                        $("#listImg8").append().empty();
+                        $("#listExpect8").append().empty();
+                        $("#listPrereq8").append().empty();
+                        $("#listWhoJoin8").append().empty();
+                        $("#listnumberOfPartic8").append().empty();
+                        $("#listHost8").append().empty();
+                        $("#listDuration8").append().empty();
+                        $("#listType8").append().empty();
+                        $("#listElseText8").append().empty();
+                        $("#listStartTime8").append().empty();
+                        $("#listRoom8").append().empty();
+
+                        showEventList(json[prevIndex]);
                     });
 
                     $thisWeekBtn.on("click", function(){
