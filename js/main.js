@@ -199,12 +199,17 @@ $(function() {
     };//--------end SCROLL TO TOP MORE INFO
 
 
-    //--------SHOW MORE INFO (qa expansion)
+    //--------SHOW MORE INFO (list view) (qa expansion)
     $('.qa li > a').on('click', function (j) {
         j.preventDefault();
         $(this).closest('li').toggleClass('open');
     });//--------end SHOW MORE INFO (qa expansion)
 
+    //-------------Hamburger btn (aka "the Sigrun-Btn")------------------
+    $('header button').on('click', function () {
+		$('header').toggleClass('open');
+	});
+    //---- end Hamburger Btn
 
     //--------SCROLL TO TOP
     //Check to see if the window is top if not then display button
