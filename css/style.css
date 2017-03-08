@@ -155,7 +155,8 @@ h6 {
     margin-bottom: 40px; } }
 
 a {
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
   a:hover {
     text-decoration: none; }
 

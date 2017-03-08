@@ -10,11 +10,12 @@ $(function() {
     var $scrollToTopBtn;
     var $prevWeekBtn;
     var $thisWeekBtn;
-    var $nextWeekBtn;
+    var $nextBtn;
     var $infoTest;
     //var $listContent;
 
-    var index;
+    var events = [];
+    var index = [1];
 
     //init
     var init = function(){
@@ -28,28 +29,18 @@ $(function() {
             $scrollToTopBtn = $("#scrollToTopBtn");
             $prevWeekBtn = $("#prevWeekBtn");
             $thisWeekBtn = $("#thisWeekBtn");
-            $nextWeekBtn = $("#nextWeekBtn");
+            $nextBtn = $("#nextBtn");
             $infoTest = $("#infoTest").get(0);
             //$listContent = $("#listContent");
         }();//end Set HTML objects
 
         //Set events
         var setEvents = function(){
-         //   $JStrack1.on("click", function(){
-           //     scrollToMoreInfo();
-        //    });
+            //   $JStrack1.on("click", function(){
+            //     scrollToMoreInfo();
+            //    });
             $scrollToTopBtn.on("click", function(){
                 scrollUp();
-            });
-            $thisWeekBtn.on("click", function(){
-                showThisWeek();
-            });
-            $nextWeekBtn.on("click", function(){
-                showInfo(events[++index]);
-                //showNextWeek();
-            });
-            $prevWeekBtn.on("click", function(){
-                showPrevWeek();
             });
         }();//end Set events
 
@@ -62,7 +53,7 @@ $(function() {
     function getEventJSON(){
 
         //var events = [];
-        var index = [1];
+        //var index = [1];
 
         $.ajax(
             {
@@ -75,6 +66,24 @@ $(function() {
                     events = json[index].events;
                     showInfo(json);
                     showEventList(json);
+
+                    $nextBtn.on("click", function(){
+
+                        $(".JStrack1").append().empty();
+                        $(".JStrack2").append().empty();
+                        $(".JStrack3").append().empty();
+                        $(".JStrack4").append().empty();
+                        $(".JStrack5").append().empty();
+                        $(".JStrack6").append().empty();
+                        $(".JStrack7").append().empty();
+                        $(".JStrack8").append().empty();
+
+                        var nextIndex = [++index];
+                        console.log(json[nextIndex]);
+                        events = json[nextIndex].events;
+                        showInfo(json[nextIndex]);
+
+                    });
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown){
                     alert("Status: " + textStatus); alert("Error: " + errorThrown);
@@ -103,28 +112,10 @@ $(function() {
             .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
     };
 
-    function showThisWeek(json){
-        //alert("bajs");
-        json[1];
-    };//end thisPrevWeek
-
-    function showPrevWeek(json){
-        //json[0];
-        var prevIndex = [0];
-        showInfo(prevIndex);
-    };//end ShowPrevWeek
-
-    function showNextWeek(json){
-        //alert('show next week');
-        //var nextIndex = [2];
-
-        //showInfo(events[++index]);//(nextIndex);
-    };//end ShowNextWeek
-
     //LIST
     function showEventList(json){
 
-      //  console.log(json[index]);
+        console.log(json[index]);
 
         //EVENT #1
         $("#listTitle1").append(events[0].title);
@@ -242,23 +233,21 @@ $(function() {
 
     //-------------Hamburger btn (aka "the Sigrun-Btn")------------------
     $('header button').on('click', function () {
-		$('header').toggleClass('open');
-	});
+        $('header').toggleClass('open');
+    });
     //---- end Hamburger Btn
 
     //--------SCROLL TO MORE INFO (scrolls from calender view, down to list view, on same topic.)
-$('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1000);
-    }
-});
-
-    //--------end SCROLL TO MORE INFO
-
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+   //--------end SCROLL TO MORE INFO
 
     //--------SHOW MORE INFO (open list view) (qa expansion)
     $('.qa li > a').on('click', function (j) {
