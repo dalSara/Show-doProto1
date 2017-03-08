@@ -8,9 +8,9 @@ $(function() {
     var $JSList1;
 
     var $scrollToTopBtn;
-    var $prevWeekBtn;
+    var $prevBtn;
     var $thisWeekBtn;
-    var $nextWeekBtn;
+    var $nextBtn;
     var $infoTest;
     //var $listContent;
 
@@ -21,14 +21,13 @@ $(function() {
 
         //Set HTML objects
         var setHTMLObjects = function(){
-            $gitCal = $("#gitCal");
-            $gitList = $("#gitList");
+
             $JStrack1 = $(".JStrack1");
             $JSList1 = $("#JSList1");
             $scrollToTopBtn = $("#scrollToTopBtn");
-            $prevWeekBtn = $("#prevWeekBtn");
+            $prevBtn = $("#prevBtn");
             $thisWeekBtn = $("#thisWeekBtn");
-            $nextWeekBtn = $("#nextWeekBtn");
+            $nextBtn = $("#nextBtn");
             $infoTest = $("#infoTest").get(0);
             //$listContent = $("#listContent");
         }();//end Set HTML objects
@@ -44,11 +43,11 @@ $(function() {
             $thisWeekBtn.on("click", function(){
                 showThisWeek();
             });
-            $nextWeekBtn.on("click", function(){
-                showInfo(events[++index]);
+            $nextBtn.on("click", function(){
+                showNextWeek();
                 //showNextWeek();
             });
-            $prevWeekBtn.on("click", function(){
+            $prevBtn.on("click", function(){
                 showPrevWeek();
             });
         }();//end Set events
@@ -63,6 +62,7 @@ $(function() {
 
         //var events = [];
         var index = [1];
+        var Nextindex = [2];
         var date = [];
 
         $.ajax(
@@ -74,7 +74,6 @@ $(function() {
                 success: function(json){
                     //alert("JSON er på plass!");
                     events = json[index].events;
-                    date = json[index].date;
                     showInfo(json);
                     showEventList(json);
                 },
@@ -104,30 +103,9 @@ $(function() {
         $(".JStrack8")
             .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
     };
-
-    function showThisWeek(json){
-        //alert("bajs");
-
-    };//end thisPrevWeek
-
-    function showPrevWeek(json){
-        //json[0];
-        var prevIndex = [0];
-        showInfo(prevIndex);
-    };//end ShowPrevWeek
-
-    function showNextWeek(index){
-        showInfo[2].index;
-        //alert('show next week');
-        //var nextIndex = [2];
-
-        //showInfo(events[++index]);//(nextIndex);
-    };//end ShowNextWeek
-
-    //LIST
+       //LIST
     function showEventList(json){
 
-      //  console.log(json[index]);
 
         //EVENT #1
         $("#listTitle1").append(events[0].title);
@@ -199,6 +177,552 @@ $(function() {
         $("#listStartTime5").append("<strong>Starts: </strong>" + events[4].startTime);
         $("#listRoom5").append("<strong>Where: </strong>" + events[4].room);
     };//end LIST
+
+
+
+    function showThisWeek(json){
+//var events = [];
+        var index = [1];
+        var date = [];
+
+        $.ajax(
+            {
+                type: "GET",
+                dataType: "json",
+                url: 'info.json',
+
+                success: function(json){
+                    //alert("JSON er på plass!");
+                    events = json[index].events;
+                    showInfo(json);
+                    showEventList(json);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                    //console.error("Status: " + textStatus + " , Error: " + errorThrown);
+                }
+            }
+        );//end ajax call
+    };//end getEventJSON
+
+    function showInfo(json){
+        $(".JStrack1").empty()
+            .append(("<a href='#JsScroll1' class='scrollTo'>") + events[0].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[0].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[0].duration + ("</div>") + ("</a>"));
+        $(".JStrack2").empty()
+            .append(("<a href='#JsScroll2' class='scrollTo'>") + events[1].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[1].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[1].duration + ("</div>") + ("</a>"));
+        $(".JStrack3").empty()
+            .append(("<a href='#JsScroll3' class='scrollTo'>") + events[2].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[2].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[2].duration + ("</div>") + ("</a>"));
+        $(".JStrack4").empty()
+            .append(("<a href='#JsScroll4' class='scrollTo'>") + events[3].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[3].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[3].duration + ("</div>") + ("</a>"));
+        $(".JStrack5").empty()
+            .append(("<a href='#JsScroll5' class='scrollTo'>") + events[4].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[4].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[4].duration + ("</div>") + ("</a>"));
+        $(".JStrack6").empty()
+            .append(("<a href='#JsScroll6' class='scrollTo'>") + events[5].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[5].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[5].duration + ("</div>") + ("</a>"));
+        $(".JStrack7").empty()
+            .append(("<a href='#JsScroll7' class='scrollTo'>") + events[6].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[6].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[6].duration + ("</div>") + ("</a>"));
+        $(".JStrack8").empty()
+            .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
+    };
+       //LIST
+    function showEventList(json){
+
+      //  console.log(json[index]);
+
+        //EVENT #1
+        $("#listTitle1").empty()
+            .append(events[0].title);
+        $("#listImg1").empty()
+            .append(events[0].image);
+        $("#listExpect1").empty()
+            .append(events[0].expect);
+        $("#listPrereq1").empty()
+            .append(events[0].prereq);
+        $("#listWhoJoin1").empty()
+            .append(events[0].whoJoin);
+        $("#listnumberOfPartic1").empty()
+            .append("<strong>Number of participants: </strong>" + events[0].numberOfPartic);
+        $("#listHost1").empty()
+            .append("<strong>Host: </strong>" +events[0].host);
+        $("#listDuration1").empty()
+            .append(events[0].duration);
+        $("#listType1").empty()
+            .append(events[0].type);
+        $("#listElseText1").empty()
+            .append("<strong>Other info: </strong>" + events[0].else);
+        $("#listStartTime1").empty()
+            .append("<strong>Starts: </strong>" + events[0].startTime);
+        $("#listRoom1").empty()
+            .append("<strong>Where: </strong>" + events[0].room);
+
+        //EVENT #2
+        $("#listTitle2").empty()
+            .append(events[1].title);
+        $("#listImg2").empty()
+            .append(events[1].image);
+        $("#listExpect2").empty()
+            .append(events[1].expect);
+        $("#listPrereq2").empty()
+            .append(events[1].prereq);
+        $("#listWhoJoin2").empty()
+            .append(events[1].whoJoin);
+        $("#listnumberOfPartic2").empty()
+            .append("<strong>Number of participants: </strong>" + events[1].numberOfPartic);
+        $("#listHost2").empty()
+            .append("<strong>Host: </strong>" +events[1].host);
+        $("#listDuration2").empty()
+            .append(events[1].duration);
+        $("#listType2").empty()
+            .append(events[1].type);
+        $("#listElseText2").empty()
+            .append("<strong>Other info: </strong>" + events[1].else);
+        $("#listStartTime2").empty()
+            .append("<strong>Starts: </strong>" + events[1].startTime);
+        $("#listRoom2").empty()
+            .append("<strong>Where: </strong>" + events[1].room);
+
+        //EVENT #3
+        $("#listTitle3").empty()
+            .append(events[2].title);
+        $("#listImg3").empty()
+            .append(events[2].image);
+        $("#listExpect3").empty()
+            .append(events[2].expect);
+        $("#listPrereq3").empty()
+        .append(events[2].prereq);
+        $("#listWhoJoin3").empty()
+            .append(events[2].whoJoin);
+        $("#listnumberOfPartic3").empty()
+            .append("<strong>Number of participants: </strong>" + events[2].numberOfPartic);
+        $("#listHost3").empty()
+            .append("<strong>Host: </strong>" +events[2].host);
+        $("#listDuration3").empty()
+            .append(events[2].duration);
+        $("#listType3").empty()
+            .append(events[2].type);
+        $("#listElseText3").empty()
+            .append("<strong>Other info: </strong>" + events[2].else);
+        $("#listStartTime3").empty()
+            .append("<strong>Starts: </strong>" + events[2].startTime);
+        $("#listRoom3").empty()
+            .append("<strong>Where: </strong>" + events[2].room);
+
+        //EVENT #4
+        $("#listTitle4").empty()
+            .append(events[3].title);
+        $("#listImg4").empty()
+            .append(events[3].image);
+        $("#listExpect4").empty()
+            .append(events[3].expect);
+        $("#listPrereq4").empty()
+            .append(events[3].prereq);
+        $("#listWhoJoin4").empty()
+            .append(events[3].whoJoin);
+        $("#listnumberOfPartic4").empty()
+            .append("<strong>Number of participants: </strong>" + events[3].numberOfPartic);
+        $("#listHost4").empty()
+            .append("<strong>Host: </strong>" +events[3].host);
+        $("#listDuration4").empty()
+            .append(events[3].duration);
+        $("#listType4").empty()
+            .append(events[3].type);
+        $("#listElseText4").empty()
+            .append("<strong>Other info: </strong>" + events[3].else);
+        $("#listStartTime4").empty()
+            .append("<strong>Starts: </strong>" + events[3].startTime);
+        $("#listRoom4").empty()
+            .append("<strong>Where: </strong>" + events[3].room);
+
+        //EVENT #5
+        $("#listTitle5").empty()
+            .append(events[4].title);
+        $("#listImg5").empty()
+            .append(events[4].image);
+        $("#listExpect5").empty()
+            .append(events[4].expect);
+        $("#listPrereq5").empty()
+            .append(events[4].prereq);
+        $("#listWhoJoin5").empty()
+            .append(events[4].whoJoin);
+        $("#listnumberOfPartic5").empty()
+            .append("<strong>Number of participants: </strong>" + events[4].numberOfPartic);
+        $("#listHost5").empty()
+            .append("<strong>Host: </strong>" +events[4].host);
+        $("#listDuration5").empty()
+            .append(events[4].duration);
+        $("#listType5").empty()
+            .append(events[4].type);
+        $("#listElseText5").empty()
+            .append("<strong>Other info: </strong>" + events[4].else);
+        $("#listStartTime5").empty()
+            .append("<strong>Starts: </strong>" + events[4].startTime);
+        $("#listRoom5").empty()
+            .append("<strong>Where: </strong>" + events[4].room);
+    };//end LIST
+
+
+    function showPrevWeek(json){
+
+        //var events = [];
+        var index = [0];
+        var date = [];
+
+        $.ajax(
+            {
+                type: "GET",
+                dataType: "json",
+                url: 'info.json',
+
+                success: function(json){
+                    //alert("JSON er på plass!");
+                    events = json[index].events;
+                    showInfo(json);
+                    showEventList(json);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                    //console.error("Status: " + textStatus + " , Error: " + errorThrown);
+                }
+            }
+        );//end ajax call
+    };//end getEventJSON
+
+    function showInfo(json){
+        $(".JStrack1").empty()
+            .append(("<a href='#JsScroll1' class='scrollTo'>") + events[0].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[0].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[0].duration + ("</div>") + ("</a>"));
+        $(".JStrack2").empty()
+            .append(("<a href='#JsScroll2' class='scrollTo'>") + events[1].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[1].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[1].duration + ("</div>") + ("</a>"));
+        $(".JStrack3").empty()
+            .append(("<a href='#JsScroll3' class='scrollTo'>") + events[2].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[2].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[2].duration + ("</div>") + ("</a>"));
+        $(".JStrack4").empty()
+            .append(("<a href='#JsScroll4' class='scrollTo'>") + events[3].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[3].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[3].duration + ("</div>") + ("</a>"));
+        $(".JStrack5").empty()
+            .append(("<a href='#JsScroll5' class='scrollTo'>") + events[4].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[4].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[4].duration + ("</div>") + ("</a>"));
+        $(".JStrack6").empty()
+            .append(("<a href='#JsScroll6' class='scrollTo'>") + events[5].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[5].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[5].duration + ("</div>") + ("</a>"));
+        $(".JStrack7").empty()
+            .append(("<a href='#JsScroll7' class='scrollTo'>") + events[6].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[6].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[6].duration + ("</div>") + ("</a>"));
+        $(".JStrack8").empty()
+            .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
+    };
+       //LIST
+    function showEventList(json){
+
+      //  console.log(json[index]);
+
+        //EVENT #1
+        $("#listTitle1").empty()
+            .append(events[0].title);
+        $("#listImg1").empty()
+            .append(events[0].image);
+        $("#listExpect1").empty()
+            .append(events[0].expect);
+        $("#listPrereq1").empty()
+            .append(events[0].prereq);
+        $("#listWhoJoin1").empty()
+            .append(events[0].whoJoin);
+        $("#listnumberOfPartic1").empty()
+            .append("<strong>Number of participants: </strong>" + events[0].numberOfPartic);
+        $("#listHost1").empty()
+            .append("<strong>Host: </strong>" +events[0].host);
+        $("#listDuration1").empty()
+            .append(events[0].duration);
+        $("#listType1").empty()
+            .append(events[0].type);
+        $("#listElseText1").empty()
+            .append("<strong>Other info: </strong>" + events[0].else);
+        $("#listStartTime1").empty()
+            .append("<strong>Starts: </strong>" + events[0].startTime);
+        $("#listRoom1").empty()
+            .append("<strong>Where: </strong>" + events[0].room);
+
+        //EVENT #2
+        $("#listTitle2").empty()
+            .append(events[1].title);
+        $("#listImg2").empty()
+            .append(events[1].image);
+        $("#listExpect2").empty()
+            .append(events[1].expect);
+        $("#listPrereq2").empty()
+            .append(events[1].prereq);
+        $("#listWhoJoin2").empty()
+            .append(events[1].whoJoin);
+        $("#listnumberOfPartic2").empty()
+            .append("<strong>Number of participants: </strong>" + events[1].numberOfPartic);
+        $("#listHost2").empty()
+            .append("<strong>Host: </strong>" +events[1].host);
+        $("#listDuration2").empty()
+            .append(events[1].duration);
+        $("#listType2").empty()
+            .append(events[1].type);
+        $("#listElseText2").empty()
+            .append("<strong>Other info: </strong>" + events[1].else);
+        $("#listStartTime2").empty()
+            .append("<strong>Starts: </strong>" + events[1].startTime);
+        $("#listRoom2").empty()
+            .append("<strong>Where: </strong>" + events[1].room);
+
+        //EVENT #3
+        $("#listTitle3").empty()
+            .append(events[2].title);
+        $("#listImg3").empty()
+            .append(events[2].image);
+        $("#listExpect3").empty()
+            .append(events[2].expect);
+        $("#listPrereq3").empty()
+        .append(events[2].prereq);
+        $("#listWhoJoin3").empty()
+            .append(events[2].whoJoin);
+        $("#listnumberOfPartic3").empty()
+            .append("<strong>Number of participants: </strong>" + events[2].numberOfPartic);
+        $("#listHost3").empty()
+            .append("<strong>Host: </strong>" +events[2].host);
+        $("#listDuration3").empty()
+            .append(events[2].duration);
+        $("#listType3").empty()
+            .append(events[2].type);
+        $("#listElseText3").empty()
+            .append("<strong>Other info: </strong>" + events[2].else);
+        $("#listStartTime3").empty()
+            .append("<strong>Starts: </strong>" + events[2].startTime);
+        $("#listRoom3").empty()
+            .append("<strong>Where: </strong>" + events[2].room);
+
+        //EVENT #4
+        $("#listTitle4").empty()
+            .append(events[3].title);
+        $("#listImg4").empty()
+            .append(events[3].image);
+        $("#listExpect4").empty()
+            .append(events[3].expect);
+        $("#listPrereq4").empty()
+            .append(events[3].prereq);
+        $("#listWhoJoin4").empty()
+            .append(events[3].whoJoin);
+        $("#listnumberOfPartic4").empty()
+            .append("<strong>Number of participants: </strong>" + events[3].numberOfPartic);
+        $("#listHost4").empty()
+            .append("<strong>Host: </strong>" +events[3].host);
+        $("#listDuration4").empty()
+            .append(events[3].duration);
+        $("#listType4").empty()
+            .append(events[3].type);
+        $("#listElseText4").empty()
+            .append("<strong>Other info: </strong>" + events[3].else);
+        $("#listStartTime4").empty()
+            .append("<strong>Starts: </strong>" + events[3].startTime);
+        $("#listRoom4").empty()
+            .append("<strong>Where: </strong>" + events[3].room);
+
+        //EVENT #5
+        $("#listTitle5").empty()
+            .append(events[4].title);
+        $("#listImg5").empty()
+            .append(events[4].image);
+        $("#listExpect5").empty()
+            .append(events[4].expect);
+        $("#listPrereq5").empty()
+            .append(events[4].prereq);
+        $("#listWhoJoin5").empty()
+            .append(events[4].whoJoin);
+        $("#listnumberOfPartic5").empty()
+            .append("<strong>Number of participants: </strong>" + events[4].numberOfPartic);
+        $("#listHost5").empty()
+            .append("<strong>Host: </strong>" +events[4].host);
+        $("#listDuration5").empty()
+            .append(events[4].duration);
+        $("#listType5").empty()
+            .append(events[4].type);
+        $("#listElseText5").empty()
+            .append("<strong>Other info: </strong>" + events[4].else);
+        $("#listStartTime5").empty()
+            .append("<strong>Starts: </strong>" + events[4].startTime);
+        $("#listRoom5").empty()
+            .append("<strong>Where: </strong>" + events[4].room);
+    };//end LIST
+
+    function showNextWeek(){
+
+        //var events = [];
+        var index = [2];
+        var date = [];
+
+        $.ajax(
+            {
+                type: "GET",
+                dataType: "json",
+                url: 'info.json',
+
+                success: function(json){
+                    //alert("JSON er på plass!");
+                    events = json[index].events;
+                    showInfo(json);
+                    showEventList(json);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                    //console.error("Status: " + textStatus + " , Error: " + errorThrown);
+                }
+            }
+        );//end ajax call
+    };//end getEventJSON
+
+    function showInfo(json){
+        $(".JStrack1").empty()
+            .append(("<a href='#JsScroll1' class='scrollTo'>") + events[0].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[0].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[0].duration + ("</div>") + ("</a>"));
+        $(".JStrack2").empty()
+            .append(("<a href='#JsScroll2' class='scrollTo'>") + events[1].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[1].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[1].duration + ("</div>") + ("</a>"));
+        $(".JStrack3").empty()
+            .append(("<a href='#JsScroll3' class='scrollTo'>") + events[2].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[2].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[2].duration + ("</div>") + ("</a>"));
+        $(".JStrack4").empty()
+            .append(("<a href='#JsScroll4' class='scrollTo'>") + events[3].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[3].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[3].duration + ("</div>") + ("</a>"));
+        $(".JStrack5").empty()
+            .append(("<a href='#JsScroll5' class='scrollTo'>") + events[4].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[4].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[4].duration + ("</div>") + ("</a>"));
+        $(".JStrack6").empty()
+            .append(("<a href='#JsScroll6' class='scrollTo'>") + events[5].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[5].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[5].duration + ("</div>") + ("</a>"));
+        $(".JStrack7").empty()
+            .append(("<a href='#JsScroll7' class='scrollTo'>") + events[6].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[6].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[6].duration + ("</div>") + ("</a>"));
+        $(".JStrack8").empty()
+            .append(("<a href='#JsScroll8' class='scrollTo'>") + events[7].title + ("<br>") + ("<div class='rooms'>") + " Room: " + events[7].room + ("</div>") + ("<div class='duration'>") + "Duration: " + events[7].duration + ("</div>") + ("</a>"));
+    };
+       //LIST
+    function showEventList(json){
+
+      //  console.log(json[index]);
+
+        //EVENT #1
+        $("#listTitle1").empty()
+            .append(events[0].title);
+        $("#listImg1").empty()
+            .append(events[0].image);
+        $("#listExpect1").empty()
+            .append(events[0].expect);
+        $("#listPrereq1").empty()
+            .append(events[0].prereq);
+        $("#listWhoJoin1").empty()
+            .append(events[0].whoJoin);
+        $("#listnumberOfPartic1").empty()
+            .append("<strong>Number of participants: </strong>" + events[0].numberOfPartic);
+        $("#listHost1").empty()
+            .append("<strong>Host: </strong>" +events[0].host);
+        $("#listDuration1").empty()
+            .append(events[0].duration);
+        $("#listType1").empty()
+            .append(events[0].type);
+        $("#listElseText1").empty()
+            .append("<strong>Other info: </strong>" + events[0].else);
+        $("#listStartTime1").empty()
+            .append("<strong>Starts: </strong>" + events[0].startTime);
+        $("#listRoom1").empty()
+            .append("<strong>Where: </strong>" + events[0].room);
+
+        //EVENT #2
+        $("#listTitle2").empty()
+            .append(events[1].title);
+        $("#listImg2").empty()
+            .append(events[1].image);
+        $("#listExpect2").empty()
+            .append(events[1].expect);
+        $("#listPrereq2").empty()
+            .append(events[1].prereq);
+        $("#listWhoJoin2").empty()
+            .append(events[1].whoJoin);
+        $("#listnumberOfPartic2").empty()
+            .append("<strong>Number of participants: </strong>" + events[1].numberOfPartic);
+        $("#listHost2").empty()
+            .append("<strong>Host: </strong>" +events[1].host);
+        $("#listDuration2").empty()
+            .append(events[1].duration);
+        $("#listType2").empty()
+            .append(events[1].type);
+        $("#listElseText2").empty()
+            .append("<strong>Other info: </strong>" + events[1].else);
+        $("#listStartTime2").empty()
+            .append("<strong>Starts: </strong>" + events[1].startTime);
+        $("#listRoom2").empty()
+            .append("<strong>Where: </strong>" + events[1].room);
+
+        //EVENT #3
+        $("#listTitle3").empty()
+            .append(events[2].title);
+        $("#listImg3").empty()
+            .append(events[2].image);
+        $("#listExpect3").empty()
+            .append(events[2].expect);
+        $("#listPrereq3").empty()
+        .append(events[2].prereq);
+        $("#listWhoJoin3").empty()
+            .append(events[2].whoJoin);
+        $("#listnumberOfPartic3").empty()
+            .append("<strong>Number of participants: </strong>" + events[2].numberOfPartic);
+        $("#listHost3").empty()
+            .append("<strong>Host: </strong>" +events[2].host);
+        $("#listDuration3").empty()
+            .append(events[2].duration);
+        $("#listType3").empty()
+            .append(events[2].type);
+        $("#listElseText3").empty()
+            .append("<strong>Other info: </strong>" + events[2].else);
+        $("#listStartTime3").empty()
+            .append("<strong>Starts: </strong>" + events[2].startTime);
+        $("#listRoom3").empty()
+            .append("<strong>Where: </strong>" + events[2].room);
+
+        //EVENT #4
+        $("#listTitle4").empty()
+            .append(events[3].title);
+        $("#listImg4").empty()
+            .append(events[3].image);
+        $("#listExpect4").empty()
+            .append(events[3].expect);
+        $("#listPrereq4").empty()
+            .append(events[3].prereq);
+        $("#listWhoJoin4").empty()
+            .append(events[3].whoJoin);
+        $("#listnumberOfPartic4").empty()
+            .append("<strong>Number of participants: </strong>" + events[3].numberOfPartic);
+        $("#listHost4").empty()
+            .append("<strong>Host: </strong>" +events[3].host);
+        $("#listDuration4").empty()
+            .append(events[3].duration);
+        $("#listType4").empty()
+            .append(events[3].type);
+        $("#listElseText4").empty()
+            .append("<strong>Other info: </strong>" + events[3].else);
+        $("#listStartTime4").empty()
+            .append("<strong>Starts: </strong>" + events[3].startTime);
+        $("#listRoom4").empty()
+            .append("<strong>Where: </strong>" + events[3].room);
+
+        //EVENT #5
+        $("#listTitle5").empty()
+            .append(events[4].title);
+        $("#listImg5").empty()
+            .append(events[4].image);
+        $("#listExpect5").empty()
+            .append(events[4].expect);
+        $("#listPrereq5").empty()
+            .append(events[4].prereq);
+        $("#listWhoJoin5").empty()
+            .append(events[4].whoJoin);
+        $("#listnumberOfPartic5").empty()
+            .append("<strong>Number of participants: </strong>" + events[4].numberOfPartic);
+        $("#listHost5").empty()
+            .append("<strong>Host: </strong>" +events[4].host);
+        $("#listDuration5").empty()
+            .append(events[4].duration);
+        $("#listType5").empty()
+            .append(events[4].type);
+        $("#listElseText5").empty()
+            .append("<strong>Other info: </strong>" + events[4].else);
+        $("#listStartTime5").empty()
+            .append("<strong>Starts: </strong>" + events[4].startTime);
+        $("#listRoom5").empty()
+            .append("<strong>Where: </strong>" + events[4].room);
+    };//end LIST
+
+
+
+
 
 
     //-------------Hamburger btn (aka "the Sigrun-Btn")------------------
