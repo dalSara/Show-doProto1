@@ -8,7 +8,7 @@ $(function() {
     var $JSList1;
 
     var $scrollToTopBtn;
-    var $prevWeekBtn;
+    var $prevBtn;
     var $thisWeekBtn;
     var $nextBtn;
     var $infoTest;
@@ -27,7 +27,7 @@ $(function() {
             $JStrack1 = $(".JStrack1");
             $JSList1 = $("#JSList1");
             $scrollToTopBtn = $("#scrollToTopBtn");
-            $prevWeekBtn = $("#prevWeekBtn");
+            $prevBtn = $("#prevBtn");
             $thisWeekBtn = $("#thisWeekBtn");
             $nextBtn = $("#nextBtn");
             $infoTest = $("#infoTest").get(0);
@@ -66,6 +66,36 @@ $(function() {
                     events = json[index].events;
                     showInfo(json);
                     showEventList(json);
+
+                    $prevBtn.on("click", function(){
+                        $(".JStrack1").append().empty();
+                        $(".JStrack2").append().empty();
+                        $(".JStrack3").append().empty();
+                        $(".JStrack4").append().empty();
+                        $(".JStrack5").append().empty();
+                        $(".JStrack6").append().empty();
+                        $(".JStrack7").append().empty();
+                        $(".JStrack8").append().empty();
+
+                        var prevIndex = [--index];
+                        events = json[prevIndex].events;
+                        showInfo(json[prevIndex]);
+                    });
+
+                    $thisWeekBtn.on("click", function(){
+                        $(".JStrack1").append().empty();
+                        $(".JStrack2").append().empty();
+                        $(".JStrack3").append().empty();
+                        $(".JStrack4").append().empty();
+                        $(".JStrack5").append().empty();
+                        $(".JStrack6").append().empty();
+                        $(".JStrack7").append().empty();
+                        $(".JStrack8").append().empty();
+
+                        events = json[1].events;
+                        showInfo(json[index]);
+                    });
+
 
                     $nextBtn.on("click", function(){
 
@@ -247,7 +277,7 @@ $(function() {
             }, 1000);
         }
     });
-   //--------end SCROLL TO MORE INFO
+    //--------end SCROLL TO MORE INFO
 
     //--------SHOW MORE INFO (open list view) (qa expansion)
     $('.qa li > a').on('click', function (j) {
