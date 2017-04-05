@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Show & Do</title>
+
+</head>
+
+<body class="frontpage">
+
+    <!--------------------------------HEADER-------------------------------->
+    <header class="pageHeader">
+        <div class="wrapper basic">
+            <a class="logo" href="index.html">
+                <img src="../images/logo-sd.svg" alt="Making Waves Logo">
+            </a>
+            <!--<button>Menu</button>-->
+            <nav class="mainMenu">
+                <ul>
+                    <li><a href="addTrack.html">Add track</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--------------------------------end HEADER-------------------------------->
+
+    <main>
+        <div class="wrapper basic">
+
+            <!--------------------------------NAVIGATION-------------------------------->
+            <div id="navigation">
+                <div id="navWeek">
+                    <div><a id="prevBtn"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous<br>
+                            <strong>10.02.17</strong>
+                            </a></div>
+                    <div style="text-align: center"><a id="thisWeekBtn">Displayed week<br>
+                            <strong>10.03.17</strong></a></div>
+                    <div><a id="nextBtn">Next  <i class="fa fa-angle-right" aria-hidden="true"></i><br>
+                            <strong>24.03.17</strong>
+                            </a></div>
+                </div>
+            </div>
+            <!--------------------------------end NAVIGATION-------------------------------->
+
+            <!--------------------------------CALENDER-------------------------------->
+            <div id="calender">
+                <!-- TABLE VISIBLE ONLY ON LARGE SCREENS -->
+                <div id="cal-desktop">
+                    <table class="table-cal">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1300-
+                                    <br>1345
+                                </th>
+                                <td class="cal JStrack1" rowspan="3"></td>
+                                <td class="cal JStrack2" rowspan="3"></td>
+                                <td class="cal JStrack4" rowspan="2"></td>
+                                <td class="cal JStrack3" rowspan="2"></td>
+                                <td class="cal JStrack6" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1400-
+                                    <br>1445
+                                </th>
+                                <td class="cal JStrack7"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1500-
+                                    <br>1545
+                                </th>
+                                <td class="cal JStrack5"></td>
+                                <td style="background: transparent"></td>
+                                <td class="cal JStrack8"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end TABLE VISIBLE ONLY ON LARGE SCREENS -->
+
+
+                <!-- DIV VISIBLE ONLY ON SMALL SCREENS -->
+                <div id="cal-mobile">
+                    <div id="main">
+                        <div>
+                            <div class="track-time-mob">1300-<br>1345</div>
+                        </div>
+                        <div>
+                            <div class="track-mob JStrack1"></div>
+                            <div class="track-mob JStrack2"></div>
+                            <div class="track-mob JStrack3"></div>
+                            <div class="track-mob JStrack4"></div>
+                            <div class="track-mob JStrack6"></div>
+                        </div>
+                    </div>
+
+                    <div id="main">
+                        <div>
+                            <div class="track-time-mob">1400-<br>1445</div>
+                        </div>
+                        <div>
+                            <div class="track-mob JStrack7"></div>
+                        </div>
+                    </div>
+
+                    <div id="main">
+                        <div>
+                            <div class="track-time-mob">1500-<br>1545</div>
+                        </div>
+                        <div>
+                            <div class="track-mob JStrack5"></div>
+                            <div class="track-mob JStrack8"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end DIV VISIBLE ONLY ON SMALL SCREENS -->
+            </div>
+            <!--------------------------------end CALENDER-------------------------------->
+
+            <div style="text-align: center">
+                <p></p>
+                Scroll down for full list<br>
+                <i class="fa fa-angle-down fa-3x" style="opacity: 0.5" aria-hidden="true"></i>
+
+            </div>
+
+            <!--------------------------------LIST-------------------------------->
+            <section class="listStyle">
+                <ul>
+                    <!--id="listContent">-->
+                    <li id="JsScroll1">
+                        <!--TRACK 1-->
+                        <figure class="cut-image">
+                            <img id="listImg1" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle1"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom1"></div>
+                                <div id="listExpect1">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq1">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost1"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox" class="checkbox" name="cb" value="10">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+
+                                <br>
+                                <div id="listWhoJoin1"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <!--<span id="listnumberOfPartic1"></span>--><span class="number">10</span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime1"></span> &nbsp; <span id="listDuration1"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText1"></div>
+                            <div>
+                                <a href="editTrack1Git.html"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 1-->
+
+                    <!--start TRACK 2-->
+                    <li id="JsScroll2">
+
+                        <figure class="cut-image">
+                            <img id="listImg2" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle2"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom2"></div>
+                                <div id="listExpect2">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq2">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost2"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin2"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic2"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime2"></span> &nbsp; <span id="listDuration2"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText2"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 2-->
+                    <!--start TRACK 3-->
+                    <li id="JsScroll3">
+
+                        <figure class="cut-image">
+                            <img id="listImg3" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle3"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom3"></div>
+                                <div id="listExpect3">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq3">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost3"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin3"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic3"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime3"></span> &nbsp; <span id="listDuration3"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText3"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 3-->
+                    <!--start TRACK 4-->
+                    <li id="JsScroll4">
+
+                        <figure class="cut-image">
+                            <img id="listImg4" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle4"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom4"></div>
+                                <div id="listExpect4">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq4">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost4"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin4"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic4"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime4"></span> &nbsp; <span id="listDuration4"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText4"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 4-->
+
+                    <!--start TRACK 5-->
+                    <li id="JsScroll5">
+
+                        <figure class="cut-image">
+                            <img id="listImg5" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle5"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom5"></div>
+                                <div id="listExpect5">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq5">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost5"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin5"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic5"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime5"></span> &nbsp; <span id="listDuration5"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText5"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 5-->
+                    <!--start TRACK 6-->
+                    <li id="JsScroll6">
+
+                        <figure class="cut-image">
+                            <img id="listImg6" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle6"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom6"></div>
+                                <div id="listExpect6">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq6">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost6"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin6"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic6"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime6"></span> &nbsp; <span id="listDuration6"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText6"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 6-->
+                    <!--start TRACK 7-->
+                    <li id="JsScroll7">
+
+                        <figure class="cut-image">
+                            <img id="listImg7" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle7"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom7"></div>
+                                <div id="listExpect7">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq7">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost7"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <p>
+                                    <h4>Going?</h4>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                    <br>
+                                    <div id="listWhoJoin7"><strong>Suitable for:</strong><br></div>
+                                    <div>
+                                        <span id="listnumberOfPartic7"></span> are going
+
+                                    </div>
+
+                                    <br>
+
+
+                                    <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime7"></span> &nbsp; <span id="listDuration7"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText7"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 7-->
+                    <!--start TRACK 8-->
+                    <li id="JsScroll8">
+
+                        <figure class="cut-image">
+                            <img id="listImg8" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle8"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom8"></div>
+                                <div id="listExpect8">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq8">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost8"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+                                <br>
+                                <div id="listWhoJoin8"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <span id="listnumberOfPartic8"></span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime8"></span> &nbsp; <span id="listDuration8"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText8"></div>
+                            <div>
+                                <a href="#"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 8-->
+                </ul>
+            </section>
+            <!--------------------------------end LIST-------------------------------->
+        </div>
+        <!--end container-->
+    </main>
+    <!--end main-->
+
+    <!--SCROLL TO TOP BUTTON-->
+    <a href="#" id="scrollToTopBtn" class="scrollToTopBtn">
+        <i class="fa fa-angle-up fa-4x" aria-hidden="true"></i>
+    </a>
+    <!--end SCROLL TO TOP BUTTON-->
+
+    <script>
+        var increment2 = 10;
+        $(document).on("change", ".checkbox", function() {
+            $('.number').html('' + (increment2 += this.checked ? 1 : -1) + '');
+        })
+
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('.pageHeader').outerHeight();
+
+        $(window).scroll(function(event) {
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make sure they scroll more than delta
+            if (Math.abs(lastScrollTop - st) <= delta)
+                return;
+
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                $('.pageHeader').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if (st + $(window).height() < $(document).height()) {
+                    $('.pageHeader').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+
+            lastScrollTop = st;
+        }
+
+    </script>
+
+    <!--SCRIPT-->
+    <!--<script src="/js/functions.js" type="text/javascript"></script>-->
+    <script src="/js/main.js"></script>
+    <!--<script src="/js/json.js"></script>-->
+</body>
+
+</html>
