@@ -15,7 +15,9 @@ $(function() {
     //var $listContent;
 
     var events = [];
+    var date = [];
     var index = [1];
+    var dateIndex = [1];
 
     //init
     var init = function(){
@@ -64,10 +66,22 @@ $(function() {
                 success: function(json){
                     //alert("JSON er på plass!");
                     events = json[index].events;
+                    /*-------------- NAVIGATION DATE PART 2/3 -------------*/
+                    prevDate = json[dateIndex - 1].date;
+                    thisDate = json[dateIndex].date;
+                    nextDate = json[++dateIndex].date;
+                    /*-------------- END NAVIGATION DATE PART 2/3 -------------*/
+
+                    showDate(json);
                     showInfo(json);
                     showEventList(json);
 
                     $prevBtn.on("click", function(){
+                        //NAVIGATION DATE
+                        $("#prevDate").empty().append("<p>27.01.2017</p>");
+                        $("#thisDate").empty().append(prevDate);
+                        $("#nextDate").empty().append(thisDate);
+
                         //CALENDER
                         $(".JStrack1").append().empty();
                         $(".JStrack2").append().empty();
@@ -191,6 +205,7 @@ $(function() {
                     });
 
                     $thisWeekBtn.on("click", function(){
+                        showDate();
                         //CALENDER
                         $(".JStrack1").append().empty();
                         $(".JStrack2").append().empty();
@@ -314,6 +329,11 @@ $(function() {
 
 
                     $nextBtn.on("click", function(){
+                        //NAVIGATION DATE
+                        $("#prevDate").empty().append(thisDate);
+                        $("#thisDate").empty().append(nextDate);
+                        $("#nextDate").empty().append("<p>07.04.2017</p>");
+
                         //CALENDER
                         $(".JStrack1").append().empty();
                         $(".JStrack2").append().empty();
@@ -444,6 +464,13 @@ $(function() {
             }
         );//end ajax call
     };//end getEventJSON
+    /*-------------- NAVIGATION DATE PART 3/3 -------------*/
+    function showDate(json){
+        $("#prevDate").empty().append("<p>" + prevDate + "</p>");
+        $("#thisDate").empty().append("<p>" + thisDate + "</p>");
+        $("#nextDate").empty().append("<p>" + nextDate + "</p>");
+    };
+    /*-------------- END NAVIGATION DATE PART 3/3 -------------*/
 
     function showInfo(json){
         $(".JStrack1")
@@ -582,18 +609,18 @@ $(function() {
     };//end LIST
 
     //--------SCROLL TO MORE INFO (scrolls from calender view, down to list view, on same topic.)
-     $('.scroll').click(function(event){
-         event.preventDefault();
-         //calculate destination place
-         var dest=0;
-         if($(this.hash).offset().top > $(document).height()-$(window).height()){
-              dest=$(document).height()-$(window).height();
-         }else{
-              dest=$(this.hash).offset().top;
-         }
-         //go to destination
-         $('html,body').animate({scrollTop:dest}, 1000,'swing');
-     });
+    $('.scroll').click(function(event){
+        event.preventDefault();
+        //calculate destination place
+        var dest=0;
+        if($(this.hash).offset().top > $(document).height()-$(window).height()){
+            dest=$(document).height()-$(window).height();
+        }else{
+            dest=$(this.hash).offset().top;
+        }
+        //go to destination
+        $('html,body').animate({scrollTop:dest}, 1000,'swing');
+    });
 
     /*
     $('a[href^="#"]').on('click', function(event) {
