@@ -1,0 +1,425 @@
+/* volte */
+@font-face {
+  font-family: "Volte Light";
+  src: url("../fonts/Volte-Light.woff2") format("woff2"), url("../fonts/Volte-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Light Italic";
+  src: url("../fonts/Volte-LightItalic.woff2") format("woff2"), url("../fonts/Volte-LightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Regular";
+  src: url("../fonts/Volte-Regular.woff2") format("woff2"), url("../fonts/Volte-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Regular Italic";
+  src: url("../fonts/Volte-RegularItalic.woff2") format("woff2"), url("../fonts/Volte-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Medium";
+  src: url("../fonts/Volte-Medium.woff2") format("woff2"), url("../fonts/Volte-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Medium Italic";
+  src: url("../fonts/Volte-MediumItalic.woff2") format("woff2"), url("../fonts/Volte-MediumItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Semibold";
+  src: url("../fonts/Volte-Semibold.woff2") format("woff2"), url("../fonts/Volte-Semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Semibold Italic";
+  src: url("../fonts/Volte-SemiboldItalic.woff2") format("woff2"), url("../fonts/Volte-SemiboldItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Bold";
+  src: url("../fonts/Volte-Bold.woff2") format("woff2"), url("../fonts/Volte-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Volte Bold Italic";
+  src: url("../fonts/Volte-BoldItalic.woff2") format("woff2"), url("../fonts/Volte-BoldItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* aften */
+@font-face {
+  font-family: 'Aften Screen';
+  src: url("../fonts/aften_screen.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Aften Screen';
+  src: url("../fonts/aften_screen_italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Aften Screen';
+  src: url("../fonts/aften_screen_bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+/***************** constants ************************/
+/***************** general ************************/
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Aften Screen', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.6; }
+
+body {
+  padding-top: 100px;
+  background: #f6f6f6;
+  color: #3d3d3d;
+  margin: 0; }
+
+header {
+  background: #fff;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%; }
+  header .logo {
+    background: url("../images/logo-sd.svg") no-repeat center, url("../images/logo-sd-col1.svg") no-repeat -10000px center;
+    /* preload */
+    display: inline-block;
+    vertical-align: top; }
+    header .logo:hover {
+      background: url("../images/logo-sd-col1.svg") no-repeat center; }
+    header .logo img {
+      display: block;
+      height: 27px;
+      opacity: 0; }
+  header .logoText {
+    margin-left: 1.5em;
+    font-weight: 600; }
+
+.nav-up {
+  top: -100px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0; }
+
+h1 {
+  font-family: 'Volte Bold';
+  font-size: 5.5em;
+  line-height: 1;
+  word-wrap: break-word;
+  margin: 0 200px 40px 0;
+  /* right space for download button */
+  color: #ff5c5c; }
+
+h2,
+h3 {
+  font-family: 'Volte Semibold'; }
+
+h2 {
+  font-size: 1.9em;
+  line-height: 1.3;
+  margin-bottom: 10px; }
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px; }
+
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-size: 1em; }
+
+.lead {
+  font-family: 'Volte Medium';
+  font-size: 1.5em;
+  margin-bottom: 80px; }
+
+@media (max-width: 900px) {
+  html {
+    font-size: 1em; }
+  h1 {
+    font-size: 2em;
+    line-height: 1.3;
+    margin-right: 50px; }
+  h2 {
+    font-size: 1.4em; }
+  h3 {
+    font-size: 1.2em; }
+  .lead {
+    font-size: 1.2em;
+    margin-bottom: 40px; } }
+
+a {
+  color: inherit;
+  cursor: pointer; }
+  a:hover {
+    text-decoration: none; }
+
+ul,
+ol,
+p {
+  margin: 0 0 40px 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+  ul ul {
+    margin: 0; }
+
+p {
+  max-width: 700px; }
+
+figure {
+  margin: 0; }
+
+figcaption {
+  margin-top: 10px; }
+
+img {
+  max-width: 100%; }
+
+a img {
+  border: none; }
+
+iframe {
+  max-width: 100%;
+  border: none; }
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block; }
+
+.icon-edit {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/notepad-edit.svg") no-repeat 50% 50%;
+  mask: url("../images/notepad-edit.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #000; }
+
+.icon-room {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/location-pin-2.svg") no-repeat 50% 50%;
+  mask: url("../images/location-pin-2.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #000; }
+
+.icon-edit-filled {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/notepad-edit-filled.svg") no-repeat 50% 50%;
+  mask: url("../images/notepad-edit-filled.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #fff; }
+
+.icon-room-filled {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/location-pin-2-filled.svg") no-repeat 50% 50%;
+  mask: url("../images/location-pin-2-filled.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #fff; }
+
+/********************************************
+wrappers
+********************************************/
+.wrapper {
+  box-sizing: content-box;
+  padding: 0 5%;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .wrapper.full {
+    padding-right: 0;
+    padding-left: 0; }
+  .wrapper.basic {
+    max-width: 1200px; }
+  .wrapper.narrow {
+    max-width: 750px; }
+
+.scrollToTopBtn {
+  /*text-align: center;*/
+  /*position: relative;*/
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: black;
+  background-color: #fff;
+  padding: 5px; }
+
+/********************************************
+nav general
+********************************************/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+nav a {
+  text-decoration: none;
+  color: inherit; }
+  nav a:hover {
+    text-decoration: underline;
+    color: #06f; }
+
+nav .Active a {
+  text-decoration: underline;
+  color: #06f; }
+
+#navWeek {
+  width: auto;
+  bottom: 1em;
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem; }
+
+.navItem {
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1; }
+
+/********************************************
+mainMenu
+********************************************/
+.mainMenu {
+  font-family: 'Volte Semibold';
+  text-transform: uppercase;
+  font-size: .889em;
+  transition: all .5s; }
+  .mainMenu a {
+    padding: 10px; }
+    .mainMenu a[href=""] {
+      opacity: .2; }
+  .mainMenu li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 50px; }
+
+@media (max-width: 1200px) {
+  .mainMenu li {
+    float: right; } }
+
+@media (max-width: 1200px) {
+  body {
+    padding-top: 0;
+    margin-top: 0; }
+  header {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    height: 80px; }
+  .mainMenu {
+    padding-top: 1.4em; }
+    .mainMenu li {
+      padding-top: 0.4em;
+      margin-left: 0px; }
+  .wrapper {
+    padding-top: 0;
+    margin-top: 0; } }
+
+/********************************************
+main
+********************************************/
+main {
+  display: block; }
+  main .wrapper {
+    margin-bottom: 0px; }
+    main .wrapper.top {
+      margin-bottom: 0; }
+  main img,
+  main svg {
+    display: block; }
+  main figure {
+    margin-bottom: 80px; }
+
+@media (max-width: 900px) {
+  main .hero {
+    margin-bottom: 40px; } }
+
+.prefix:after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #3d3d3d;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px; }
+
+/********************************************
+inputs
+********************************************/
+button {
+  font-family: "Volte Semibold";
+  font-size: inherit;
+  line-height: inherit;
+  background-color: white;
+  color: #06f;
+  border: 3px solid #06f;
+  border-radius: 0;
+  padding: 10px 20px;
+  margin: 0;
+  -webkit-appearance: none;
+  cursor: pointer; }
+  button.subtle {
+    padding: 5px 10px;
+    border: none;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    color: inherit;
+    font-size: .778rem; }
+
+.track-mob {
+  background: #06f;
+  border: 1px solid white;
+  color: white;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 10px;
+  font-size: 1.1em; }
+
+.track-time-mob {
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-bottom: 1em; }

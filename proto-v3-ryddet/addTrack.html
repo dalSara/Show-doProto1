@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Add track</title>
+
+    <style>
+        input[type=text], input[type=submit], textarea, .custom-file-upload {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+            font-size: 1em;
+        }
+
+        input[type=submit] {
+            font-family: "Volte Semibold";
+            background: #0066FF;
+            color: #fff;
+            font-size: 1em;
+            border: 3px solid #fff;
+            padding: 20px 0px 15px 0px;
+        }
+
+        input[type=submit]:hover {
+            border: 3px solid #0066FF;
+            background: #0066FF;
+            color: #fff;
+        }
+
+        input[type=text]:focus,  textarea:focus {
+            border: 3px solid #0066FF;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .custom-file-upload {
+            background: #fff;
+            width: auto;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            resize: none;
+        }
+    </style>
+
+</head>
+
+<body class="frontpage">
+
+    <!--HEADER-->
+    <header class="pageHeader">
+			<div class="wrapper basic">
+                <a class="logo" href="index.html">
+					<img src="../images/logo-sd.svg" alt="Making Waves Logo">
+				</a>
+                <!--<button>Menu</button>-->
+                <nav class="mainMenu">
+					<ul>
+                        <li><a href="addTrack.html">Add track</a></li>
+					</ul>
+				</nav>
+			</div>
+    </header>
+    <main>
+        <div class="wrapper basic">
+            <p></p>
+            <h2>Add track</h2>
+
+            <form action="previewTrack.html">
+                <br>
+                Title
+                <input type="text" name="title" value="">
+                <br><br>
+                Prerequisites (is there anything the attendees need to know beforehand)
+                <input type="text" name="prereq" value="">
+                <br><br>
+                What to expect (The tracks agenda, what will you teach to others etc)
+                <textarea></textarea>
+                <br><br>
+                Who should join? (Who is this track best suited for?)
+                <input type="text" name="whoShouldJoin" value="">
+                <br>
+                <br> Do you have an image to add attention to your track? (this image will be the tracks header in the list)
+                <br>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Choose an image
+                </label>
+                <input id="file-upload" type="file"/>
+                <br>
+                <br> Anything else to add?
+                <br> (Links, videos for preparation, other tracks, co-hosts, equipment etc)
+                <br>
+                <textarea></textarea>
+                <br>
+                <input type="submit" value="Add track">
+            </form>
+
+        </div>
+        <!--end container-->
+    </main>
+    <!--end main-->
+
+    <!--SCROLL TO TOP BUTTON-->
+    <a href="#" id="scrollToTopBtn" class="scrollToTopBtn">
+        <i class="fa fa-angle-up fa-4x" aria-hidden="true"></i>
+    </a>
+    <!--end SCROLL TO TOP BUTTON-->
+
+
+    <!--SCRIPT-->
+    <script src="/js/functions.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="/js/json.js" type="text/javascript"></script>
+</body>
+
+</html>
