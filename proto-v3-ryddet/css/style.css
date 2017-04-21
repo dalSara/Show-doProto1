@@ -212,11 +212,6 @@ iframe {
   max-width: 100%;
   border: none; }
 
-.icon {
-  width: 48px;
-  height: 48px;
-  display: inline-block; }
-
 .icon-edit {
   display: inline-block;
   width: 30px;
@@ -237,6 +232,16 @@ iframe {
   mask-size: cover;
   background-color: #000; }
 
+.icon-clock {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/clock.svg") no-repeat 50% 50%;
+  mask: url("../images/clock.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #000; }
+
 .icon-edit-filled {
   display: inline-block;
   width: 30px;
@@ -253,6 +258,16 @@ iframe {
   height: 30px;
   -webkit-mask: url("../images/location-pin-2-filled.svg") no-repeat 50% 50%;
   mask: url("../images/location-pin-2-filled.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #fff; }
+
+.icon-clock-filled {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  -webkit-mask: url("../images/clock-filled.svg") no-repeat 50% 50%;
+  mask: url("../images/clock-filled.svg") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: #fff; }
@@ -283,6 +298,60 @@ wrappers
   color: black;
   background-color: #fff;
   padding: 5px; }
+
+.story-pager {
+  width: 30px;
+  border-top: 10px solid #fc0;
+  position: absolute;
+  margin-top: 14px;
+  left: -22px;
+  margin-left: 0;
+  height: 100%; }
+
+.story {
+  position: relative;
+  padding-bottom: 2.222rem;
+  padding-left: 1.111rem; }
+
+.story-pager:before {
+  content: '';
+  position: absolute;
+  font-family: "Volte Medium";
+  font-size: .899rem;
+  top: -37px;
+  right: 0;
+  color: rgba(51, 51, 51, 0.29); }
+
+.story:nth-child(2) .story-pager:before {
+  content: '13'; }
+
+.story:nth-child(3) .story-pager:before {
+  content: '1400'; }
+
+.story:nth-child(4) .story-pager:before {
+  content: '1500'; }
+
+.story-pager:after {
+  content: '';
+  position: absolute;
+  height: calc(100% - 30px - .899rem);
+  border-left: 2px solid rgba(51, 51, 51, 0.29);
+  right: 9px;
+  top: 15px; }
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.track {
+  background-color: #06f;
+  padding: 2em;
+  margin: 1em;
+  width: 50%;
+  color: #fff; }
+  .track a {
+    color: #fff; }
 
 /********************************************
 nav general

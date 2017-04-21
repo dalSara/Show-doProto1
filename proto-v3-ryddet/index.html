@@ -38,15 +38,32 @@
     <main>
 
         <div class="wrapper basic">
-            <div class="wrapper top"><h1>Hello!</h1></div>
-        <div class="wrapper narrow"><div class="lead"><p>Welcome to the Show & Do Bookingsystem. Here you can add your planned track and check the upcoming schedule. You can also browse the archive. Enjoy!</p></div></div>
-            <div><a href="#test1" class="scroll">Click to scroll</a></div>
+
+            <div class="story">
+                <div class="story-pager"></div>
+                <h2>Schedule for 21.04.17</h2>
+                <p></p>
+                <p></p>
+
+            </div>
+            <div class="story">
+                <div class="story-pager"></div>
+                <div>
+                    <a href="#JsScroll1" class="scroll track-mob">
+                        Introduksjon til Git <i class="icon-room"></i> 101<br>
+                    </a>
+                </div>
+            </div>
+
+
             <div><a href="#test2" class="scroll">Click to scroll</a></div>
+            <div><i class="icon-clock"></i></div>
             <div><i class="icon-edit"></i></div>
             <div><i class="icon-room"></i></div>
             <div></div>
             <div class="track-mob">
                 <h3>Title</h3>
+                <p><i class="icon-clock-filled"></i></p>
                 <p><i class="icon-room-filled"></i> 101</p>
                 <p><i class="icon-edit-filled"></i></p>
             </div>
@@ -106,6 +123,90 @@
             <div>Test</div>
             <div>Test</div>
             <div>Test</div>
+            <section class="listStyle">
+                <ul>
+                    <!--id="listContent">-->
+                    <li id="JsScroll1">
+                        <!--TRACK 1-->
+                        <figure class="cut-image">
+                            <img id="listImg1" class="image-to-cut" src="img/event.jpg">
+                        </figure>
+
+                        <a href="">
+                            <!--Dropdown-->
+                            <h3 id="listTitle1"></h3>
+                            <!--TITLE-->
+                        </a>
+
+                        <!--DESCRIPTION, HOSTS & GOING-SWITCH -->
+                        <div class="event-wrap">
+
+                            <!--LEFT COLUMN-->
+                            <div class="info">
+                                <div id="listRoom1"></div>
+                                <div id="listExpect1">
+                                    <h4>What to expect?</h4>
+                                </div>
+                                <br>
+                                <div id="listPrereq1">
+                                    <h4>Prerequisites</h4>
+                                </div>
+                                <br>
+                                <div id="listHost1"></div>
+                            </div>
+
+                            <!--RIGHT COLUMN-->
+                            <div class="info-right">
+                                <!--SWITCH-->
+                                <h4>Going?</h4>
+
+                                <label class="switch">
+                                        <input type="checkbox" class="checkbox" name="cb" value="10">
+                                        <div class="slider"></div>
+                                        <span class="going-feedback">Du er nå meldt på!</span>
+                                    </label>
+
+                                <br>
+                                <div id="listWhoJoin1"><strong>Suitable for:</strong><br></div>
+                                <div>
+                                    <!--<span id="listnumberOfPartic1"></span>--><span class="number">10</span> are going
+
+                                </div>
+
+                                <br>
+
+
+                                <!--end SWITCH-->
+
+                            </div>
+                            <!--END RIGHT COLUMN-->
+
+
+                        </div>
+                        <!--end DESCRIPTION, HOSTS & GOING-SWITCH--->
+                        <!--INFO-->
+                        <div class="flex-list">
+                            <div class="flex-list-item">
+                                <span id="listStartTime1"></span> &nbsp; <span id="listDuration1"><strong>Duration: </strong></span>
+                                <br>
+
+
+                            </div>
+                        </div>
+                        <div class="flex-list">
+                            <div id="listElseText1"></div>
+                            <div>
+                                <a href="editTrack1Git.html"><i class="fa fa-pencil-square-o fa-2x editLink" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <br>
+                        </div>
+                    </li>
+                    <!--end TRACK 1-->
+                </ul>
+            </section>
         </div>
     </main>
     <!--end main-->
@@ -116,72 +217,8 @@
     </a>
     <!--end SCROLL TO TOP BUTTON-->
 
-    <script>
-        var increment2 = 10;
-        $(document).on("change", ".checkbox", function() {
-            $('.number').html('' + (increment2 += this.checked ? 1 : -1) + '');
-        })
-
-        // Hide Header on on scroll down
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = $('header').outerHeight();
-
-        $(window).scroll(function(event) {
-            didScroll = true;
-        });
-
-        setInterval(function() {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
-
-        function hasScrolled() {
-            var st = $(this).scrollTop();
-
-            // Make sure they scroll more than delta
-            if (Math.abs(lastScrollTop - st) <= delta)
-                return;
-
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight) {
-                // Scroll Down
-                $('header').removeClass('nav-down').addClass('nav-up');
-            } else {
-                // Scroll Up
-                if (st + $(window).height() < $(document).height()) {
-                    $('header').removeClass('nav-up').addClass('nav-down');
-                }
-            }
-
-            lastScrollTop = st;
-        }
-
-        $(".scroll").click(function(event) {
-            event.preventDefault();
-            //calculate destination place
-            var dest = 0;
-            if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-                dest = $(document).height() - $(window).height();
-            } else {
-                dest = $(this.hash).offset().top;
-            }
-            //go to destination
-            $('html,body').animate({
-                scrollTop: dest
-            }, 500, 'swing');
-        });
-
-    </script>
-
     <!--SCRIPT-->
-    <!--<script src="/js/functions.js" type="text/javascript"></script>-->
     <script src="js/main.js"></script>
-    <!--<script src="/js/json.js"></script>-->
 </body>
 
 </html>
