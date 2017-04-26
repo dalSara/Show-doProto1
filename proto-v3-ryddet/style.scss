@@ -283,7 +283,7 @@ iframe {
     display: inline-block;
     width: 30px;
     height: 30px;
-    -webkit-mask: url('../images/notepad-edit.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../images/pencil-write-2.svg') no-repeat 50% 50%;
     mask: url('../images/notepad-edit.svg') no-repeat 50% 50%;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -316,7 +316,7 @@ iframe {
     display: inline-block;
     width: 30px;
     height: 30px;
-    -webkit-mask: url('../images/notepad-edit-filled.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../images/pencil-write-2-filled.svg') no-repeat 50% 50%;
     mask: url('../images/notepad-edit-filled.svg') no-repeat 50% 50%;
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -626,6 +626,79 @@ button {
     font-size: 1.2em;
     font-weight: 600;
     padding-bottom: 1em;
+}
+
+/********************************************
+going toggle yes/no button
+********************************************/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border: 4px solid #06f;
+    -webkit-transition: .4s;
+    transition: .4s;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "NO";
+    height: 42px;
+    width: 62px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #06f;
+    border: 4px solid #06f;
+}
+
+.going-feedback {
+    margin-top: 55px;
+    color: transparent;
+    font-size: 14px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider~.going-feedback {
+    color: #06f !important;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(68px);
+    -ms-transform: translateX(68px);
+    transform: translateX(68px);
+    content: "YES";
 }
 
 

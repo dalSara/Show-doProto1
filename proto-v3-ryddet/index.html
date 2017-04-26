@@ -14,6 +14,107 @@
 
     <title>Show & Do</title>
 
+    <style>
+        #registerBtn {
+            display: inline-block;
+            background: #0066FF;
+            border: 4px solid #0066FF;
+            /* Submit: */
+            font-family: Volte-Semibold;
+            font-size: 1rem;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .goingBtn {
+            width: 250px;
+        }
+
+        .goingBtn:after {
+            width: 250px;
+            content: "Going?";
+        }
+
+        .going-clicked {
+            background-color: #06f;
+            color: #fff;
+        }
+
+        .going-registered:after {
+            background-color: white;
+            transition: .2s;
+            color: #0066FF;
+            content: "You're going!";
+        }
+
+        .goingInput {
+            overflow: hidden;
+            width: 250px;
+            background-color: #fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input[type=text],
+        input[type=submit],
+        textarea,
+        .custom-file-upload {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+            font-size: 1em;
+        }
+
+        input[type=submit] {
+            font-family: "Volte Semibold";
+            background: #0066FF;
+            color: #fff;
+            font-size: 1em;
+            border: 3px solid #fff;
+            padding: 20px 0px 15px 0px;
+        }
+
+        input[type=submit]:hover {
+            border: 3px solid #0066FF;
+            background: #0066FF;
+            color: #fff;
+        }
+
+        input[type=text]:focus,
+        textarea:focus {
+            border: 3px solid #0066FF;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .custom-file-upload {
+            background: #fff;
+            width: auto;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            resize: none;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -39,24 +140,26 @@
 
         <div class="wrapper basic">
 
-            <div class="story">
-                <div class="story-pager"></div>
-                <h2>Schedule for 21.04.17</h2>
-                <p></p>
-                <p></p>
-
-            </div>
-            <div class="story">
-                <div class="story-pager"></div>
-                <div>
-                    <a href="#JsScroll1" class="scroll track-mob">
-                        Introduksjon til Git <i class="icon-room"></i> 101<br>
-                    </a>
-                </div>
-            </div>
 
 
             <div><a href="#test2" class="scroll">Click to scroll</a></div>
+<p></p>
+            <div>
+
+                <button type="button" class="goingBtn" id="going"></button>
+                <div class="goingInput hidden" id="goingInput">
+                    <div class="inputName">
+                        Name: <input type="text" value="" id="name" name="name">
+                        <div tabindex="0" role="button" id="registerBtn" type="submit">Register</div>
+                    </div>
+                </div>
+
+            </div>
+
+<p></p>
+            <p></p>
+
+
             <div><i class="icon-clock"></i></div>
             <div><i class="icon-edit"></i></div>
             <div><i class="icon-room"></i></div>
@@ -218,7 +321,34 @@
     <!--end SCROLL TO TOP BUTTON-->
 
     <!--SCRIPT-->
+
     <script src="js/main.js"></script>
+    <script>
+        /*
+                        var button = document.getElementById("going");
+                        var goingInput = document.getElementById("goingInput");
+
+                        function toggle() {
+
+
+                        }
+
+                        toggle();
+
+                        button.addEventListener("click", toggle, false);
+                        */
+        $("#going").click(function() {
+            $("#going").addClass('going-clicked');
+            $("#goingInput").stop().slideToggle(500).removeClass('hidden');
+        })
+
+        $("#registerBtn").click(function() {
+            $("#going").addClass('going-registered').removeClass('going-clicked');
+            $("#goingInput").stop().slideToggle(500).removeClass('hidden');
+        })
+
+
+    </script>
 </body>
 
 </html>
